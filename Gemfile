@@ -8,6 +8,7 @@ gem 'puma'
 gem 'uglifier'
 gem 'turbolinks', '~> 5'
 gem 'rails_admin', '~> 1.2'
+gem 'redcarpet'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
