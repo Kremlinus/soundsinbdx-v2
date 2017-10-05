@@ -16,9 +16,19 @@
 </p>
 
 <% @event.socials.each do |social| %>
-  <%= link_to social.link do %>
-    <%= social.label %>
-  <% end %><br>
+  <% if social.label == 'map' %>
+    <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBLPUauR9jfvfkmOf1yU4cptcDVt1ojOMs
+      &q= <%= social.link %>, Bordeaux+France" allowfullscreen>
+    </iframe>
+  <% else %>
+    <%= link_to social.link do %>
+      <%= social.label %>
+    <% end %><br>
+  <% end %>
 <% end %>
 
 <%= link_to 'Back', events_path %>

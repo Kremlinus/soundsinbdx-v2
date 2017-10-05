@@ -12,7 +12,8 @@ class Social < ApplicationRecord
       ['twitter'],
       ['github'],
       ['linkedin'],
-      ['tickets']
+      ['tickets'],
+      ['map']
     ]
   end
 end
