@@ -1,3 +1,6 @@
+<% content_for :meta_title, pageTitle = @event.name %>
+<% content_for :meta_description, strip_tags(markdown(@event.description)).gsub!("\n", ' ') %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +10,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @event.description %>
+  <%= markdown(@event.description) %>
 </p>
 
 <p>
