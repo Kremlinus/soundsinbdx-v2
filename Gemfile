@@ -7,6 +7,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'puma'
 gem 'uglifier'
 gem 'turbolinks', '~> 5'
+gem 'rails_admin', '~> 1.2'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
