@@ -5,4 +5,12 @@ class ApplicationController < ActionController::Base
   def home
   end
 
+  # GET /archive
+  def archives
+  end
+
+  # GET /contact
+  def contact
+  end
+
 end
