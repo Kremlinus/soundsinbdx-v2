@@ -13,6 +13,7 @@ description.text
 name.string
 description.text
 date.datetime
+best.boolean
 
 ## socials
 *about_us.references*
