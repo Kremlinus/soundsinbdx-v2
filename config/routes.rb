@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :socials
   resources :events
   resources :artists
   resources :about_us
