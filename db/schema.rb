@@ -10,6 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171005075132) do
+
+  create_table "about_us", force: :cascade do |t|
+    t.string "name"
+    t.string "role"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.string "baseline"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "date"
+    t.boolean "best"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "socials", force: :cascade do |t|
+    t.string "label"
+    t.string "link"
+    t.integer "about_u_id"
+    t.integer "artist_id"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["about_u_id"], name: "index_socials_on_about_u_id"
+    t.index ["artist_id"], name: "index_socials_on_artist_id"
+    t.index ["event_id"], name: "index_socials_on_event_id"
+  end
 
 end
