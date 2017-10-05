@@ -15,5 +15,10 @@
   <%= @about_u.description %>
 </p>
 
-<%= link_to 'Edit', edit_about_u_path(@about_u) %> |
+<% @about_u.socials.each do |social| %>
+  <%= link_to social.link do %>
+    <%= social.label %>
+  <% end %><br>
+<% end %>
+
 <%= link_to 'Back', about_us_path %>

@@ -16,6 +16,15 @@
 </p>
 
 <p>
+  <strong>Socials:</strong><br>
+  <% @artist.socials.each do |social| %>
+    <%= link_to social.link do %>
+      <%= social.label %>
+    <% end %><br>
+  <% end %>
+</p>
+
+<p>
   <strong>Image:</strong>
   <%= image_tag @artist.image  %>
 </p>
