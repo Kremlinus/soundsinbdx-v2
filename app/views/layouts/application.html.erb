@@ -36,9 +36,11 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= render partial: 'layouts/partials/header' %>
-    <%= yield %>
-    <%= render partial: 'layouts/partials/footer' %>
+      <%= render partial: 'layouts/partials/header' %>
+      <div class="body-wrapper">
+        <%= yield %>
+      </div>
+      <%= render partial: 'layouts/partials/footer' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
