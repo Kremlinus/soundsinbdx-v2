@@ -7,8 +7,8 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
 
-  # GET /artists/1
-  # GET /artists/1.json
+  # GET /artists/slug
+  # GET /artists/slug.json
   def show
   end
 

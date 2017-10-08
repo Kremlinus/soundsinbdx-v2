@@ -2,26 +2,35 @@
 
 <h1>Events</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= form_tag event_filter_url do %>
+   <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all')) %>
+   <%= submit_tag 'Recherche' %>
+<% end %>
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.description %></td>
-        <td><%= event.date %></td>
-        <td><%= link_to 'Show', event_url(event.slug) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% if @events.count <= 0 %>
+  Aucun résultat
+<% else %>
+   <table>
+     <thead>
+       <tr>
+         <th>Name</th>
+         <th>Description</th>
+         <th>Date</th>
+         <th colspan="3"></th>
+       </tr>
+     </thead>
+
+     <tbody>
+       <% @events.each do |event| %>
+         <tr>
+           <td><%= event.name %></td>
+           <td><%= event.description %></td>
+           <td><%= event.date %></td>
+           <td><%= link_to 'Show', event_url(event.slug) %></td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
+<% end %>
 
 <br>

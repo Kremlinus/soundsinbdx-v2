@@ -7,9 +7,25 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  # GET /events/1
-  # GET /events/1.json
+  # GET /events/slug
+  # GET /events/slug.json
   def show
+  end
+
+  # POST /events/slug
+  # POST /events/slug.json
+  def filters
+     @events = Event.all
+
+     if params[:price] == '0'
+        @events = Event.where(:price => 0)
+     elsif params[:price] == '-10'
+        @events = Event.where("PRICE < 10 AND PRICE != 0")
+     elsif params[:price] == '+10'
+        @events = Event.where("PRICE > 10")
+     end
+
+     render 'index'
   end
 
   private

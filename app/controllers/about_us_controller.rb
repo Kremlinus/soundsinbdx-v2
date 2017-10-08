@@ -7,8 +7,8 @@ class AboutUsController < ApplicationController
     @about_us = AboutU.all
   end
 
-  # GET /about_us/1
-  # GET /about_us/1.json
+  # GET /about_us/slug
+  # GET /about_us/slug.json
   def show
   end
 
