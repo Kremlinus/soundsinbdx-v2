@@ -1,28 +1,28 @@
 <header>
 
-   <div class="menu-btn" id="menu">
+   <div class="menu-btn" id="menu-btn">
       <span></span>
    </div>
 
    <h2 class="header-title">sounds in bordeaux</h2>
 
-   <nav class="menu">
+   <nav class="menu" id="menu">
       <ul class="menu-main">
          <li class="menu-main_item"><%= link_to "Cette semaine", '/best'%></li>
          <li class="menu-main_item"><%= link_to "Événements", '/evenements'%></li>
          <li class="menu-main_item"><%= link_to "Artistes", '/artistes'%></li>
-         <li class="menu-main_item"><%= link_to "À propos", '/about_us'%></li>
+         <li class="menu-main_item"><%= link_to "À propos", '/a-propos'%></li>
       </ul>
 
-      <p class="menu-sublinks">
-         <%= link_to "contact", '/best'%> -
-         <%= link_to "archives", '/best'%>
-      </p>
+      <ul class="menu-sublinks">
+         <li class="menu-sublinks_item"><%= link_to "contact", '/best'%> -</li>
+         <li class="menu-sublinks_item"><%= link_to "archives", '/archives'%></li>
+      </ul>
 
       <ul class="menu-social">
-         <li><a href="https://www.facebook.com/SoundsInBordeaux/?fref=ts">Facebook</a></li>
-         <li><a href="https://twitter.com/SoundsBordeaux">Twitter</a></li>
-         <li><a href="https://www.instagram.com/soundsinbordeaux/">Instagram</a></li>
+         <li class="menu-social_item"><a href="https://www.facebook.com/SoundsInBordeaux/?fref=ts">Facebook</a></li>
+         <li class="menu-social_item"><a href="https://twitter.com/SoundsBordeaux">Twitter</a></li>
+         <li class="menu-social_item"><a href="https://www.instagram.com/soundsinbordeaux/">Instagram</a></li>
       </ul>
    </nav>
 
