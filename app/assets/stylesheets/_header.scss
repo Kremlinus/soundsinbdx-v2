@@ -35,84 +35,35 @@ header {
       }
 
       &-btn {
-      	$burgerWidth: 28px;
-      	$burgerThickness: 4px;
-         position: absolute;
-         left: 50px;
+         height: 20px;
+         width: 20px;
+         position: fixed;
          top: 50px;
-      	border: 0;
-      	background: none;
-      	outline: 0;
-      	padding: 0;
-      	cursor: pointer;
-         transition: all .25s ease-out;
-      	border-bottom: $burgerThickness solid currentColor;
-      	width: $burgerWidth;
+         right: 50px;
 
-      	transition: border-bottom 1s ease-in-out;
-      	-webkit-transition: border-bottom 1s ease-in-out;
-
-         @include breakpoint(mobileonly) {
-            left: 25px;
-            top: 25px;
-         }
-      	// Fix for extra space in Firefox
-      	&::-moz-focus-inner {
-      		border: 0;
-      		padding: 0;
-      	}
-
-      	&:before {
-      		content: "";
-      		display: block;
-      		border-bottom: $burgerThickness solid currentColor;
-      		width: 80%;
-            transition: all .25s ease-out;
-      		margin-bottom: 5px;
-      		transition: transform 0.5s ease-in-out;
-      		-webkit-transition: -webkit-transform 0.5s ease-in-out;
-      	}
-
-      	&:after {
-      		content: "";
-      		display: block;
-      		border-bottom: $burgerThickness solid currentColor;
-      		width: 100%;
-            transition: all .25s ease-out;
-      		margin-bottom: 5px;
-      		transition: transform 0.5s ease-in-out;
-      		-webkit-transition: -webkit-transform 0.5s ease-in-out;
-      	}
-
-      	&.open {
-      		border-bottom: $burgerThickness solid transparent;
-      		transition: border-bottom 0.8s ease-in-out;
-      		-webkit-transition: border-bottom 0.8s ease-in-out;
-
-      		&:before {
-      			transform: rotate(-45deg) translateY(1px) translateX(-3px);
-      			-webkit-transform: rotate(-45deg) translateY(1px) translateX(-3px);
-      			transition: transform 0.5s ease-in-out;
-      			-webkit-transition: -webkit-transform 0.5s ease-in-out;
-      		}
-
-      		&:after {
-      			transform: rotate(45deg) translateY(-4px) translateX(-5px);
-      			-webkit-transform: rotate(45deg) translateY(-4px) translateX(-5px);
-      			transition: transform 0.5s ease-in-out;
-      			-webkit-transition: -webkit-transform 0.5s ease-in-out;
-      		}
-      	}
-
-         &:hover {
+         span {
+            background: $black;
+            width: 20px;
+            height: 3px;
+            position: absolute;
 
             &:after, &:before {
-               width: 100%;
+               content: '';
+               background: $black;
+               width: 20px;
+               height: 3px;
+               position: absolute;
             }
 
+            &:after {
+               top: -7px;
+            }
+
+            &:before {
+               top: 7px;
+            }
          }
       }
-
 
       &-main {
 

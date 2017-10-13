@@ -1,0 +1,26 @@
+.container-events {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   @include breakpoint(laptop) {
+      width: 1020px;
+
+      .events-cards, .events-cards img {
+         width: calc(100vw / 3);
+         height: calc(100vw / 3);
+      }
+
+   }
+
+   .events-cards, .events-cards img {
+      width: 50vw;
+      height: 50vw;
+   }
+
+   .events-cards img {
+      object-fit: cover;
+   }
+
+}
