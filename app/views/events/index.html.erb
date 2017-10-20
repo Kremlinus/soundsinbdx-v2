@@ -7,6 +7,7 @@
 <%= form_tag event_filter_url do %>
    <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all')) %>
    <%= select_tag(:location, options_for_select(filter_array['location'], params[:location] ||= 'all')) %>
+   <%= select_tag(:musicType, options_for_select(filter_array['musicType'], params[:musicType] ||= 'all')) %>
    <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all')) %>
    <%= submit_tag 'Recherche' %>
 <% end %>

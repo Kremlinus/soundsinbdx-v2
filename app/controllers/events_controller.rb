@@ -27,6 +27,13 @@ class EventsController < ApplicationController
        })
      end
 
+     # Music type filter
+     if params[:musicType] != 'all'
+       @events = @events.joins(:music_type).where(music_types: {
+         name: params[:musicType]
+       })
+     end
+
      # Price filter
      case params[:price]
      when '0'
