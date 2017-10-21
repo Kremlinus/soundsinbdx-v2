@@ -1,0 +1,26 @@
+<% content_for :meta_title, "Liste des évenements" %>
+<% content_for :meta_description, "Retrouvez la liste des meilleurs sorties sur Bordeaux, sélectionnées par l'équipe de Sounds In Bordeaux !" %>
+
+<h1>archives</h1>
+<p></p>
+
+<div class="container-events">
+
+   <% if @events.count <= 0 %>
+     Aucun résultat
+   <% else %>
+
+   <% @events.each do |event| %>
+    <% event.best %>
+
+    <%= link_to event_url(event.slug) do %>
+         <div class="events-cards">
+           <h2><%= event.name %></h2>
+           <%= image_tag event.image %>
+         </div>
+    <% end %>
+   <% end %>
+<% end %>
+
+
+</div>

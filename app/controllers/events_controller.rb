@@ -4,7 +4,13 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.where("DATE(date) >= ?", Date.today)
+  end
+
+  # GET /events/archives
+  # GET /events/archives.json
+  def archives
+    @events = Event.where("DATE(date) < ?", Date.today)
   end
 
   # GET /events/slug
@@ -46,6 +52,8 @@ class EventsController < ApplicationController
 
      # Date filter
      case params[:date]
+     when 'all'
+       @events = @events.where("DATE(date) >= ?", Date.today)
      when 'today'
        @events = @events.where("DATE(date) = ?", Date.today)
      when 'tomorrow'
