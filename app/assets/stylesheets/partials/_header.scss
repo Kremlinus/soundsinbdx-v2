@@ -19,6 +19,7 @@ header {
       left: 50%;
       transform: translateX(-50%);
       vertical-align: middle;
+      top: 24px;
    }
 
    .menu {
@@ -43,12 +44,12 @@ header {
             font-family: Helvetica, Arial, sans-serif;
             text-decoration: none;
             text-align: center;
-            font-size: 3.125em;
+            font-size: 2em;
             margin-bottom: 1em;
             opacity: 0;
             transition: .3s ease-out;
-            @include breakpoint(mobileonly) {
-               font-size: 2em;
+            @include breakpoint(laptop) {
+               font-size: 3.125em;
 	         }
 
             &:hover {
@@ -227,11 +228,11 @@ header {
 			}
 
 			&:after {
-				bottom: 10.5px;
+				bottom: 9.5px;
 			}
 
 			&:before {
-				top: 10.5px;
+				top: 9.5px;
 			}
 	 }
 }

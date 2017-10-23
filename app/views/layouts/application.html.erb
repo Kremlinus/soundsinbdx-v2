@@ -39,13 +39,11 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    
+
   </head>
   <body>
       <%= render partial: 'layouts/partials/header' %>
-      <div class="body-wrapper">
         <%= yield %>
-      </div>
       <%= render partial: 'layouts/partials/footer' %>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
    <%= javascript_include_tag 'application' %>

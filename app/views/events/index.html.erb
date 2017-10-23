@@ -3,7 +3,7 @@
 
 <div class="wrapper-indexEvents">
 
-   <h1 class="page-title">Les événements</h1>
+   <h1 class="page-title">Événements</h1>
    <p class="page-description">Tu cherches où sortir à Bordeaux ? Ne te prends plus la tête ! Chaque semaine, l’équipe te concocte une séléction des meilleures sorties à Bordeaux. Tu trouveras ici tous genres d’événements, clubs, afterworks, festival, open air ou même concert.</p>
 
 
@@ -17,13 +17,12 @@
          <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all')) %>
          <%= submit_tag 'Recherche' %>
       <% end %>
-      <% end %>
    </div>
 
    <div class="container-events">
 
       <% if @events.count <= 0 %>
-        Aucun résultat
+        <p class="noResults">Aucun résultat, sorry bro 😕</p>
       <% else %>
 
       <% @events.each do |event| %>
@@ -40,7 +39,7 @@
                     <% begin %>
                        @<%= event.socials.where(label: "map")[0].link %>
                     <% rescue %>
-                      Lieu secret
+                     Lieu secret
                     <% end %>
                  </p>
               </span>

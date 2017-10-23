@@ -69,9 +69,13 @@ html {
 	font-family: 'Helvetica', sans-serif;
 }
 
-.body-wrapper {
-	max-width: 1024px;
+.pageWrapper {
 	width: 100%;
 	margin: 0 auto;
 	padding-top: 150px;
+}
+
+.limitedWidth {
+	width: 1024px;
+	margin: auto;
 }

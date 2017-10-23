@@ -1,11 +1,13 @@
 // Init
-@import 'var';
-@import 'mixins';
-@import 'reset';
-@import 'fonts';
+@import 'init/var';
+@import 'init/mixins';
+@import 'init/reset';
+@import 'init/fonts';
 
 // Partials
-@import 'header';
+@import 'partials/header';
+@import 'partials/newsletter-sub';
 
 // Pages
 @import 'index-events';
+@import 'home';

@@ -1,6 +1,5 @@
 .wrapper-indexEvents {
 
-
    ///////////////////////////
    // HEADING & DESC STYLES //
    ///////////////////////////
@@ -26,6 +25,13 @@
       }
    }
 
+   p.noResults {
+      font-size: 2em;
+      font-weight: 700;
+      text-align: center;
+      margin: auto;
+      color: $black;
+   }
    ///////////////////
    // FILTER STYLES //
    ///////////////////
