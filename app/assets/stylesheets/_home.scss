@@ -1,9 +1,10 @@
 .baselineBand {
    background: lighten($black, 80%);
-   padding: 50px 25px;
+   padding: 50px 5vw;
    max-width: 100vw;
+   margin-bottom: 200px;
    @include breakpoint(laptop) {
-      padding: 100px 0px;
+      padding: 100px 10vw;
    }
 
    &-txt {
@@ -12,6 +13,7 @@
       font-style: 2em;
       max-width: calc(100vw - 50px);
       word-wrap: break-word;
+      color: $black;
       @include breakpoint(tablet) {
          font-size: 3.125em;
       }

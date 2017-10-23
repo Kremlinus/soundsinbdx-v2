@@ -23,7 +23,6 @@ header {
    }
 
    .menu {
-      padding: 50px 0;
       height: 0px;
       transition: height .3s linear;
    	position: fixed;
@@ -34,7 +33,7 @@ header {
    	z-index: 2;
 
       @include breakpoint(laptop) {
-         padding-top: 100px;
+         padding-top: 50px;
       }
 
       &-main {
