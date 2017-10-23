@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	color: inherit;
+	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -30,6 +32,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: $white;
+	display: block;
 }
 ol, ul {
 	list-style: none;
@@ -56,18 +60,17 @@ html, body {
    width: 100%;
    margin: 0 auto;
 	background: $white;
+	display: block;
+	overflow: auto;
 }
 
 html {
 	background: $blue;
-}
-
-body {
-	background: $white;
+	font-family: 'Helvetica', sans-serif;
 }
 
 .body-wrapper {
-	max-width: 1020px;
+	max-width: 1024px;
 	width: 100%;
 	margin: 0 auto;
 	padding-top: 150px;

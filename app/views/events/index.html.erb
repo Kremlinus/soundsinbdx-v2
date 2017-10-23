@@ -1,34 +1,56 @@
 <% content_for :meta_title, "Liste des évenements" %>
 <% content_for :meta_description, "Retrouvez la liste des meilleurs sorties sur Bordeaux, sélectionnées par l'équipe de Sounds In Bordeaux !" %>
 
-<h1>événements</h1>
-<p></p>
+<div class="wrapper-indexEvents">
 
-<%= form_tag event_filter_url do %>
-   <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all')) %>
-   <%= select_tag(:location, options_for_select(filter_array['location'], params[:location] ||= 'all')) %>
-   <%= select_tag(:musicType, options_for_select(filter_array['musicType'], params[:musicType] ||= 'all')) %>
-   <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all')) %>
-   <%= submit_tag 'Recherche' %>
-<% end %>
+   <h1 class="page-title">Les événements</h1>
+   <p class="page-description">Tu cherches où sortir à Bordeaux ? Ne te prends plus la tête ! Chaque semaine, l’équipe te concocte une séléction des meilleures sorties à Bordeaux. Tu trouveras ici tous genres d’événements, clubs, afterworks, festival, open air ou même concert.</p>
 
-<div class="container-events">
 
-   <% if @events.count <= 0 %>
-     Aucun résultat
-   <% else %>
+   <div class="container-filters">
+      <h4>Trier par :</h4>
+      <%= form_tag event_filter_url do %>
+      <label for="price">Prix</label>
+         <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all')) %>
+         <%= select_tag(:location, options_for_select(filter_array['location'], params[:location] ||= 'all')) %>
+         <%= select_tag(:musicType, options_for_select(filter_array['musicType'], params[:musicType] ||= 'all')) %>
+         <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all')) %>
+         <%= submit_tag 'Recherche' %>
+      <% end %>
+      <% end %>
+   </div>
 
-   <% @events.each do |event| %>
-    <% event.best %>
+   <div class="container-events">
 
-    <%= link_to event_url(event.slug) do %>
-         <div class="events-cards">
-           <h2><%= event.name %></h2>
-           <%= image_tag event.image %>
-         </div>
-    <% end %>
+      <% if @events.count <= 0 %>
+        Aucun résultat
+      <% else %>
+
+      <% @events.each do |event| %>
+
+       <% event.best %>
+       <%= link_to event_url(event.slug) do %>
+            <div class="events-cards">
+              <%= image_tag event.image, :class => 'events-cards_img' %>
+              <span class="events-cards_infos">
+                 <h2><%= event.name %></h2>
+                 <p class="date">le <%= event.date.strftime "%d %b" %></p>
+                 <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
+                 <p class="place">
+                    <% begin %>
+                       @<%= event.socials.where(label: "map")[0].link %>
+                    <% rescue %>
+                      Lieu secret
+                    <% end %>
+                 </p>
+              </span>
+            </div>
+       <% end %>
+      <% end %>
+
    <% end %>
-<% end %>
 
+
+   </div>
 
 </div>
