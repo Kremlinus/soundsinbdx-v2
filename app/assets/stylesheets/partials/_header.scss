@@ -1,9 +1,9 @@
 header {
    position: fixed;
-	z-index: 1;
-	top: 0;
-	width: 100vw;
-	padding: 10px 15px;
+   z-index: 1;
+   top: 0;
+   width: 100vw;
+   padding: 10px 15px;
    height: 50px;
    background: $white;
    @include breakpoint(laptop) {
@@ -23,8 +23,8 @@ header {
    }
 
    .menu {
-      height: 0px;
-      transition: height .3s linear;
+    height: 0px;
+    transition: height .3s linear;
    	position: fixed;
    	background: $white;
    	width: 100vw;
@@ -196,12 +196,13 @@ header {
 
 // Button styles
 .menu-btn {
-	height: 30px;
-	width: 30px;
-	position: fixed;
-	z-index: 3;
-   right: 16px;
-   top: 16px;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 3;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
 
    @include breakpoint(laptop) {
       right: 50px;

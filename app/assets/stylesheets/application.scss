@@ -5,11 +5,8 @@
 @import 'init/fonts';
 
 // Partials
-@import 'partials/header';
+@import 'partials/**/*';
 
-@import 'partials/landing';
-@import 'partials/newsletter-sub';
-
-// Pages
-@import 'index-events';
-@import 'home';
+// Stylesheets per views
+@import 'application/**/*';
+@import 'events/**/*';
