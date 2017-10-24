@@ -45,13 +45,11 @@
 
   <body>
 
-      <%= render partial: 'layouts/partials/header' %>
+    <%= render partial: 'layouts/partials/header' %>
+    <%= yield %>
+    <%= render partial: 'layouts/partials/footer' %>
 
-        <%= yield %>
 
-      <%= render partial: 'layouts/partials/footer' %>
-
-      
    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/min/tiny-slider.js"></script>
 
