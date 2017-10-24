@@ -4,8 +4,32 @@
       <h2 class="title">Les <strong>événements</strong> de la semaine </h2>
    </div>
 
-   <div class="landingSect-slider" data-fluffy-container>
-      
+   <div class="landingSect-slider">
+
+      <% @events.first(5).each do |event| %>
+
+         <div class="landingSect-slider_item">
+
+            <div class="events-cards_img">
+               <%= image_tag event.image %>
+            </div>
+
+            <div class="events-cards_infos">
+               <h2><%= event.name %></h2>
+               <p class="date">le <%= event.date.strftime "%d %b" %></p>
+               <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
+               <p class="place">
+                  <% begin %>
+                     @<%= event.socials.where(label: "map")[0].link %>
+                  <% rescue %>
+                   Lieu secret
+                  <% end %>
+               </p>
+            </div>
+         </div>
+
+      <% end %>
+
    </div>
 
 </section>

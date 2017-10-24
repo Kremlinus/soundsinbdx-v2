@@ -39,13 +39,22 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css">
 
   </head>
+
   <body>
+
       <%= render partial: 'layouts/partials/header' %>
+
         <%= yield %>
+
       <%= render partial: 'layouts/partials/footer' %>
+
+      
    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/min/tiny-slider.js"></script>
+
    <%= javascript_include_tag 'application' %>
   </body>
 </html>

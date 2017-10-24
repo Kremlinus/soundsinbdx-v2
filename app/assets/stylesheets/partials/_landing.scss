@@ -2,26 +2,46 @@
 
    &-container {
       width: 100vw;
-      display: flex;
-      padding: 140px 0;
    }
 
    &-txt {
-      width: calc(100vw / 3);
-      padding-left: 5vw;
-      @include breakpoint(laptop){
-         padding-left: 10vw;
-      }
+      padding: 0 25px 0 5vw;
+      width: 100vw;
+      background: $white;
+      position: relative;
+
       .title {
          font-size: 2em;
          color: $black;
          font-weight: 600;
+         padding-top: calc(325px - 128px);
          @include breakpoint(laptop){
-         font-size: 3.125em;
+            font-size: 3.125em;
+            padding-top: calc(325px - 150px);
          }
          strong {
             color: $blue;
          }
+      }
+   }
+}
+
+.landingSect-slider {
+   position: relative;
+   padding: 40px 0;
+   margin-bottom: 200px;
+   overflow-x: scroll;
+
+   &_item {
+
+      .events-cards_img {
+         height: 400px;
+         overflow: hidden;
+         img {
+            object-fit: contain;
+            height: 100%;
+         }
+
       }
    }
 

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   # GET /
   def home
+     @events = Event.all
   end
 
   # GET /archive
