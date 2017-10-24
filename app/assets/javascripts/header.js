@@ -1,17 +1,7 @@
-var button = document.getElementById('menu-btn');
-var menu = document.getElementById('menu');
-var open = false;
+var button = document.getElementById('menu-btn'),
+		menu = document.getElementById('menu')
 
 button.addEventListener('click', function () {
-	if (open) {
-		console.log('clicked');
-		this.classList.add('cross');
-		menu.classList.add('is-open');
-		open = !open;
-	} else {
-		console.log('closed');
-		this.classList.remove('cross');
-		menu.classList.remove('is-open');
-		open = !open;
-	}
+	this.classList.toggle('cross')
+	menu.classList.toggle('is-open')
 })
