@@ -15,4 +15,7 @@ class Social < ApplicationRecord
       ['tickets']
     ]
   end
+  def name
+    label
+  end
 end
