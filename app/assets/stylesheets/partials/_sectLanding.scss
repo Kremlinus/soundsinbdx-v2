@@ -1,0 +1,148 @@
+.landingSect {
+
+   &-container {
+      width: 100vw;
+
+      .tns-controls {
+         width: 100vw;
+         transform: translateY(620px);
+         padding: 40px 20px 10px 5vw;
+         @include breakpoint (laptop) {
+            padding: 40px 10vw 10px 10vw;
+         }
+         &:active, &:focus {
+            outline: none;
+         }
+      }
+      button {
+         background: transparent;
+         border: none;
+         font-size: 1em;
+         font-family: Helvetica;
+         padding: 0 0 5px 0;
+         color: $blue;
+         border-bottom: 2px solid $blue;
+         margin-right: 20px;
+         &:active, &:focus {
+            outline: none;
+         }
+      }
+
+   }
+
+   &-txt {
+      padding: 0 25px 0 5vw;
+      width: 100vw;
+      background: $white;
+      position: relative;
+      @include breakpoint(laptop) {
+         padding: 0 25px 0 10vw;
+      }
+
+      .title {
+         font-size: 2em;
+         color: $black;
+         font-weight: 600;
+         padding-top: 140px;
+         @include breakpoint(laptop){
+            font-size: 3.125em;
+         }
+         strong {
+            color: $blue;
+         }
+      }
+   }
+}
+
+.landingSect-slider {
+   padding: 0 0 40px 5vw;
+   position: relative;
+   margin-bottom: 200px;
+   @include breakpoint(laptop) {
+      padding: 40px 0 40px 10vw;
+   }
+
+   &_item {
+
+      .events-cards_img {
+         transition: .25s ease-out;
+         height: 280px;
+         overflow: hidden;
+         @include breakpoint (phablet) {
+            height: 350px;
+         }
+         @include breakpoint (laptop) {
+            height: 400px;
+         }
+         img {
+            transition: .25s ease-out;
+            object-fit: contain;
+            height: 100%;
+         }
+
+      }
+      .events-cards_infos {
+         padding: 20px 5px;
+         background: transparent;
+
+         &-top {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            .name {
+               font-size: 1.3rem;
+               color: $black;
+               font-weight: 600;
+               width: calc(70% - 5px);
+               line-height: 20px;
+               @include breakpoint (laptop) {
+                  font-size: 1.875rem;
+                  line-height: 30px;
+               }
+            }
+            .date {
+               font-size: .9rem;
+               color: lighten($black, 50%);
+               width: calc(30% - 5px);
+               line-height: 20px;
+               text-align: right;
+               @include breakpoint (laptop) {
+                  font-size: 1rem;
+                  line-height: 30px;
+               }
+            }
+         }
+
+         &-bottom {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding-top: 5px;
+            .time, .place {
+               color: lighten($black, 50%);
+               font-size: .75rem;
+               @include breakpoint (laptop) {
+                  font-size: .9rem;
+               }
+            }
+         }
+
+      }
+
+      &:hover {
+         .events-cards_img {
+            box-shadow: 1px 25px 25px rgba($black, .05);
+            transform: translateY(-2%);
+            img {
+               text-align: center;
+            }
+         }
+
+      }
+   }
+
+}

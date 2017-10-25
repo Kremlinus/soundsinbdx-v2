@@ -1,10 +1,13 @@
 var slider = tns({
-  "container": ".landingSect-slider",
+  "container": "[data-slider-home]",
   "mouseDrag": true,
   "lazyload": true,
   "gutter": 40,
   "speed": 400,
-  "fixedWidth": 300,
+  "fixedWidth": 250,
+  "nav": false,
+  "arrowKeys": true,
+  "controlsText": ['Précédent', 'Suivant'],
   "responsive": {
      "600": {
         "fixedWidth": 350,
