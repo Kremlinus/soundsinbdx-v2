@@ -1,4 +1,6 @@
 const choices = new Choices('.selectEvent', {
    itemSelectText: '',
-   searchEnabled: false
+   searchEnabled: false,
+   resetScrollPosition: false,
+   sortFilter: false
 });

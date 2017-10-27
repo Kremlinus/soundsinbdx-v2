@@ -3,10 +3,22 @@
    &-container {
       width: 100vw;
 
+      .tns-inner {
+         height: 500px;
+         @include breakpoint (phablet) {
+            height: 600px;
+         }
+         @include breakpoint (laptop) {
+            height: 650px;
+         }
+      }
       .tns-controls {
          width: 100vw;
          transform: translateY(420px);
          padding: 40px 20px 10px 5vw;
+         @include breakpoint (phablet) {
+            transform: translateY(500px);
+         }
          @include breakpoint (laptop) {
             padding: 40px 10vw 10px 10vw;
             transform: translateY(620px);
@@ -44,7 +56,7 @@
          font-size: 2em;
          color: $black;
          font-weight: 600;
-         padding-top: 140px;
+         padding-top: 80px;
          @include breakpoint(laptop){
             font-size: 3.125em;
          }
