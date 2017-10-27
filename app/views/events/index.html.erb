@@ -3,34 +3,54 @@
 
 <div class="wrapper-indexEvents">
 
-   <h1 class="page-title">Événements</h1>
+   <h1 class="page-title">événements</h1>
    <p class="page-description">Tu cherches où sortir à Bordeaux ? Ne te prends plus la tête ! Chaque semaine, l’équipe te concocte une séléction des meilleures sorties à Bordeaux. Tu trouveras ici tous genres d’événements, clubs, afterworks, festival, open air ou même concert.</p>
 
-
+   <!-- Search filters -->
    <div class="container-filters">
-      <h4>Trier par :</h4>
-      <%= form_tag event_filter_url do %>
-      <label for="price">Prix</label>
-         <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all')) %>
-         <%= select_tag(:location, options_for_select(filter_array['location'], params[:location] ||= 'all')) %>
-         <%= select_tag(:musicType, options_for_select(filter_array['musicType'], params[:musicType] ||= 'all')) %>
-         <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all')) %>
-         <%= submit_tag 'Recherche' %>
+
+      <%= form_tag event_filter_url, :class => 'selectEvent-container' do %>
+
+         <div class="selectEvent selectEvent-price">
+            <%= label_tag 'Prix' %>
+            <%= select_tag(:price, options_for_select(filter_array['price'], params[:price] ||= 'all'), {:class => 'selectEvent'}) %>
+         </div>
+         <div class="selectEvent selectEvent-place">
+            <%= label_tag 'Lieu' %>
+            <%= select_tag(:location, options_for_select(filter_array['location'], params[:location] ||= 'all'), {:class => 'selectEvent'}) %>
+         </div>
+         <div class="selectEvent selectEvent-type">
+            <%= label_tag 'Genre musical' %>
+            <%= select_tag(:musicType, options_for_select(filter_array['musicType'], params[:musicType] ||= 'all'), {:class => 'selectEvent'}) %>
+         </div>
+         <div class="selectEvent selectEvent-date">
+            <%= label_tag 'Date' %>
+            <%= select_tag(:date, options_for_select(filter_array['date'], params[:date] ||= 'all'), {:class => 'selectEvent'}) %>
+         </div>
+
+         <%= submit_tag 'Rechercher', :class => 'filterBtn-search' %>
       <% end %>
    </div>
 
+   <!-- Events -->
    <div class="container-events">
 
+      <!-- If there is no results or events -->
       <% if @events.count <= 0 %>
-        <p class="noResults">Aucun résultat, sorry bro 😕</p>
+        <p class="noResults">Aucun résultat 😕</p>
       <% else %>
 
+      <!-- Events' mosaic -->
       <% @events.each do |event| %>
 
        <% event.best %>
        <%= link_to event_url(event.slug) do %>
             <div class="events-cards">
-              <%= image_tag event.image, :class => 'events-cards_img' %>
+
+               <div class="events-cards_img">
+                  <%= image_tag event.image %>
+               </div>
+
               <span class="events-cards_infos">
                  <h2><%= event.name %></h2>
                  <p class="date">le <%= event.date.strftime "%d %b" %></p>
@@ -43,6 +63,7 @@
                     <% end %>
                  </p>
               </span>
+
             </div>
        <% end %>
       <% end %>
