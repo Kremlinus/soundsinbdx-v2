@@ -162,39 +162,89 @@
 
    // MOSAIC STYLES //
    .container-events {
+      display: -webkit-flex;
+      display: -ms-flex;
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-      padding-bottom: 200px;
+      justify-content: space-between;
 
-      .events-cards {
+      a.linkEvent {
          width: 100%;
          @include breakpoint(phablet) {
-            width: 50vw;
+            width: 50%;
          }
          @include breakpoint(laptop) {
-            width: calc(1024px / 3);
+            width: calc(100% /3);
          }
-
+      }
+      .events-cards {
+         width: 100%;
+         margin-bottom: 30px;
+         @include breakpoint(phablet) {
+            margin-bottom: 18px;
+         }
          &_img {
-            overflow: hidden;
-            width: 100%;
-            img {
-               object-fit: cover;
-               width: 100%;
-               display: block;
+            @include breakpoint(phablet) {
+               width: calc(50vw - 30px);
+               height: calc(50vw - 30px);
             }
             @include breakpoint(laptop) {
-
+               width: calc((1024px / 3) - 20px);
+               height: calc((1024px / 3) - 20px);
+            }
+            img {
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
             }
          }
 
          &_infos {
-            .date, .time, .place {
-               display: inline-block;
+            background: $white;
+            width: 100%;
+            &-top {
+               display: flex;
+               justify-content: space-between;
+               align-content: center;
+
+               .name {
+                  font-size: 1.2rem;
+                  color: $black;
+                  font-weight: 600;
+                  line-height: 20px;
+                  @include breakpoint (laptop) {
+                     font-size: 1.575rem;
+                     line-height: 30px;
+                  }
+               }
+
+               .date {
+                  font-size: .9rem;
+                  color: lighten($black, 50%);
+                  line-height: 20px;
+                  text-align: right;
+                  @include breakpoint (laptop) {
+                     font-size: 1rem;
+                     line-height: 30px;
+                  }
+               }
+            }
+            &-bottom {
+               display: -webkit-flex;
+               display: -ms-flex;
+               display: flex;
+               justify-content: space-between;
+               align-content: center;
+               padding-top: 5px;
+               .time, .place {
+                  color: lighten($black, 50%);
+                  font-size: .75rem;
+                  @include breakpoint (laptop) {
+                     font-size: .9rem;
+                  }
+               }
             }
          }
-
       }
 
    }

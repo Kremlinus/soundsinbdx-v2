@@ -44,25 +44,29 @@
       <% @events.each do |event| %>
 
        <% event.best %>
-       <%= link_to event_url(event.slug) do %>
+       <%= link_to event_url(event.slug), :class => 'linkEvent' do %>
             <div class="events-cards">
 
                <div class="events-cards_img">
                   <%= image_tag event.image %>
                </div>
 
-              <span class="events-cards_infos">
-                 <h2><%= event.name %></h2>
-                 <p class="date">le <%= event.date.strftime "%d %b" %></p>
-                 <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
-                 <p class="place">
-                    <% begin %>
-                       @<%= event.socials.where(label: "map")[0].link %>
-                    <% rescue %>
-                     Lieu secret
-                    <% end %>
-                 </p>
-              </span>
+              <div class="events-cards_infos">
+                 <div class="events-cards_infos-top">
+                    <h2 class="name"><%= event.name %></h2>
+                    <p class="date">le <%= event.date.strftime "%d %b" %></p>
+                 </div>
+                 <div class="events-cards_infos-bottom">
+                    <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
+                    <p class="place">
+                       <% begin %>
+                          @<%= event.socials.where(label: "map")[0].link %>
+                       <% rescue %>
+                       Lieu secret
+                       <% end %>
+                    </p>
+                 </div>
+              </div>
 
             </div>
        <% end %>
