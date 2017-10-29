@@ -4,16 +4,24 @@
 
 <div class="wrapper-showEvent">
 
+   <div class="showEvent-container_img">
+      <%= image_tag @event.image %>
+   </div>
 
-      <h1><%= @event.name %></h1>
+   <div class="showEvent-container_txt">
 
-      <p class="date">le <%= @event.date.strftime "%d %b" %> à <%= @event.date.strftime "%Hh%M" %></p>
-      <p class="price"><%= @event.price %> €</p>
+      <h1 class="name"><%= @event.name %></h1>
+
+      <div class="mainInfos">
+         <p class="date">le <%= @event.date.strftime "%d.%m.%y."%> <br>à <%= @event.date.strftime "%Hh%M" %></p>
+         <p class="location">@IBOAT</p>
+         <p class="price">à partir de <%= @event.price %> €</p>
+      </div>
 
       <!-- Description -->
-      <%= markdown(@event.description) %>
-
-      <%= image_tag @event.image %>
+      <div class="desc">
+         <%= markdown(@event.description) %>
+      </div>
 
       <!-- Google map -->
       <% unless @event.location.nil? %>
@@ -21,11 +29,17 @@
       <% end %>
 
       <!-- Social links -->
-      <% @event.socials.each do |social| %>
-        <%= link_to social.link do %>
-          <%= social.label %>
-        <% end %>
-      <% end %>
+      <div class="socialContainer">
+         <% @event.socials.each do |social| %>
+           <%= link_to social.link do %>
+             <%= social.label %>
+           <% end %>
+         <% end %>
+      </div>
 
-   <%= link_to 'Back', events_path %>
+      <%= link_to '← Retour aux événements', events_path, :class => 'blackBtn' %>
+
+
+   </div>
+
 </div>

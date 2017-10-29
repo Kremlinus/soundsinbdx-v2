@@ -172,13 +172,17 @@
          @include breakpoint(laptop) {
             margin-bottom: 22px;
             &:hover {
+
                .events-cards_infos {
                   opacity: 1;
+                  transition: .25s ease-out;
                   transform: translateY(-50%);
                   &-top, &-bottom {
                      .name, .time, .date, .place {
                         transform: translateY(-80%);
                         opacity: 1;
+                        transition-delay: 1s;
+                        transition: .55s ease-out;
                      }
                   }
                }
@@ -203,7 +207,7 @@
          &_infos {
             background: $white;
             width: 100%;
-            transition: .75s ease-out;
+            transition: .25s ease-out;
             padding: 15px 10px;
             @include breakpoint(phablet) {
                width: calc(50vw - 30px);
@@ -226,7 +230,7 @@
                      transform: translateY(80%);
                      opacity: 0;
                      transition-delay: 2s;
-                     transition: .4s ease-out;
+                     transition: 2s ease-out;
                   }
                }
             }
