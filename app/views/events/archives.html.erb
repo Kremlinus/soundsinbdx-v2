@@ -1,26 +1,53 @@
 <% content_for :meta_title, "Liste des évenements" %>
 <% content_for :meta_description, "Retrouvez la liste des meilleurs sorties sur Bordeaux, sélectionnées par l'équipe de Sounds In Bordeaux !" %>
 
-<h1>archives</h1>
-<p></p>
+<div class="wrapper-indexEvents wrapper-archive">
 
-<div class="container-events">
+   <h1 class="page-title">archives</h1>
 
-   <% if @events.count <= 0 %>
-     Aucun résultat
-   <% else %>
 
-   <% @events.each do |event| %>
-    <% event.best %>
+   <!-- Past events -->
+   <div class="container-events">
 
-    <%= link_to event_url(event.slug) do %>
-         <div class="events-cards">
-           <h2><%= event.name %></h2>
-           <%= image_tag event.image %>
-         </div>
-    <% end %>
+      <!-- If there is no results or events -->
+      <% if @events.count <= 0 %>
+        <p class="noResults">Aucun résultat 😕</p>
+      <% else %>
+
+      <!-- Events' mosaic -->
+      <% @events.each do |event| %>
+
+       <% event.best %>
+       <%= link_to event_url(event.slug), :class => 'linkEvent' do %>
+            <div class="events-cards">
+
+               <div class="events-cards_img">
+                  <%= image_tag event.image %>
+               </div>
+
+              <div class="events-cards_infos">
+                 <div class="events-cards_infos-top">
+                    <h2 class="name"><%= event.name %></h2>
+                    <p class="date">le <%= event.date.strftime "%d %b" %></p>
+                 </div>
+                 <div class="events-cards_infos-bottom">
+                    <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
+                    <p class="place">
+                       <% begin %>
+                          @<%= event.socials.where(label: "map")[0].link %>
+                       <% rescue %>
+                       Lieu secret
+                       <% end %>
+                    </p>
+                 </div>
+              </div>
+
+            </div>
+       <% end %>
+      <% end %>
+
    <% end %>
-<% end %>
 
 
+   </div>
 </div>
