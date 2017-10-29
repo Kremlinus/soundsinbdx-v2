@@ -1,0 +1,15 @@
+.blueBtn {
+   color: $blue;
+   background: transparent;
+   border: none;
+   border-bottom: 2px solid $blue;
+   font-size: 1em;
+   display: inline-block;
+   padding-bottom: 5px;
+   font-weight: 500;
+   @include breakpoint(laptop) {
+      &:hover {
+         cursor: pointer;
+      }
+   }
+}

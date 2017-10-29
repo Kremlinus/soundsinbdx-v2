@@ -96,8 +96,8 @@
       .selectEvent-container {
          display: flex;
          flex-direction: row;
-         justify-content: space-between;
          flex-wrap: wrap;
+         justify-content: flex-start;
          @include breakpoint(laptop) {
             padding: 40px 0 0 0;
          }
@@ -176,7 +176,10 @@
                   opacity: 1;
                   transform: translateY(-50%);
                   &-top, &-bottom {
-                     opacity: 1;
+                     .name, .time, .date, .place {
+                        transform: translateY(-80%);
+                        opacity: 1;
+                     }
                   }
                }
             }
@@ -219,7 +222,12 @@
                flex-direction: column;
                transition: .25s ease-out;
                &-top, &-bottom {
-                  opacity: 0;
+                  .name, .time, .date, .place {
+                     transform: translateY(80%);
+                     opacity: 0;
+                     transition-delay: 2s;
+                     transition: .4s ease-out;
+                  }
                }
             }
             &-top {

@@ -3,12 +3,13 @@
 @import 'init/mixins';
 @import 'init/reset';
 @import 'init/fonts';
+@import 'init/ui-kit';
 
 // Partials
 @import 'partials/**/*';
 
 // Stylesheets per views
-@import 'application/**/*';
+@import 'home/**/*';
 @import 'events/**/*';
 
 // Librairies styles

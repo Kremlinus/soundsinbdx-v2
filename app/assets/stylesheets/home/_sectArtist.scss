@@ -1,0 +1,16 @@
+.sectArtist-container {
+   margin-bottom: 200px;
+   flex-direction: column-reverse;
+   justify-content: center;
+   @include breakpoint(laptop) {
+      flex-direction: column;
+      margin-bottom: 200px;
+   }
+   &_txt {
+      padding: 20px 20px 20px 0;
+      @include breakpoint(laptop) {
+         padding: 40px;
+      }
+   }
+
+}
