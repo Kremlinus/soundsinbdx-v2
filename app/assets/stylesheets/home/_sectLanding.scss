@@ -58,9 +58,9 @@
          font-size: 2em;
          color: $black;
          font-weight: 600;
-         padding-top: 80px;
          @include breakpoint(laptop){
             font-size: 3.125em;
+            padding-top: 80px;
          }
          strong {
             color: $blue;

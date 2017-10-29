@@ -1,0 +1,64 @@
+.newsletterSub-wrapper {
+   background: $blue;
+   padding: 40px 5vw;
+   margin-bottom: 40px;
+
+   .newsletterSub-container {
+      margin: auto;
+      width: auto;
+   }
+
+   label {
+      color: $white;
+      font-size: 1.5em;
+      font-weight: 600;
+   }
+
+   input[type='text'] {
+      border-radius: 0;
+      padding: 0 0 10px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid $white;
+      font-size: 1.5em;
+      color: $white;
+      font-weight: 600;
+      margin-top: 10px;
+      &::placeholder {
+         font-family: Helvetica, sans-serif;
+         color: rgba($white, .5);
+      }
+   }
+   input[type='submit'] {
+      background: transparent;
+      font-size: 1.5em;
+      color: $white;
+      font-weight: 600;
+      border: none;
+      text-transform: uppercase;
+      margin-top: 10px;
+      padding: 0;
+   }
+
+   @include breakpoint(laptop) {
+      text-align: center;
+      padding: 80px 5vw;
+      margin-bottom: 200px;
+      label {
+         font-size: 2.5em;
+      }
+      input[type='text'] {
+         font-size: 2.5em;
+         margin-left: 15px;
+         margin-top: 0px;
+      }
+      input[type='submit'] {
+         margin-left: 15px;
+         margin-top: 0;
+         &:hover {
+            cursor: pointer;
+            opacity: .7;
+         }
+      }
+   }
+}
