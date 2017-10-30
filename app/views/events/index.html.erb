@@ -7,8 +7,8 @@
    <p class="page-description">Tu cherches où sortir à Bordeaux ? Ne te prends plus la tête ! Chaque semaine, l’équipe te concocte une séléction des meilleures sorties à Bordeaux. Tu trouveras ici tous genres d’événements, clubs, afterworks, festival, open air ou même concert.</p>
 
    <!-- Search filters -->
-   <a href="#" data-show-filters>Filtrer</a>
-   <div class="container-filters">
+   <a href="#" id="btnFilter">Filtrer</a>
+   <div class="container-filters" id="container-filters">
 
       <%= form_tag event_filter_url, :class => 'selectEvent-container' do %>
 
@@ -38,7 +38,7 @@
 
       <!-- If there is no results or events -->
       <% if @events.count <= 0 %>
-        <p class="noResults">Aucun résultat 😕</p>
+        <p class="noResults reveal">Aucun résultat 😕</p>
       <% else %>
 
       <!-- Events' mosaic -->
@@ -46,7 +46,7 @@
 
        <% event.best %>
        <%= link_to event_url(event.slug), :class => 'linkEvent' do %>
-            <div class="events-cards">
+            <div class="events-cards reveal">
 
                <div class="events-cards_img">
                   <%= image_tag event.image %>
@@ -55,7 +55,8 @@
               <div class="events-cards_infos">
                  <div class="events-cards_infos-top">
                     <h2 class="name"><%= event.name %></h2>
-                    <p class="date">le <%= event.date.strftime "%d %b" %></p>
+
+                    <p class="date">le <%= event.date.strftime "%d.%m.%y."%></p>
                  </div>
                  <div class="events-cards_infos-bottom">
                     <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>

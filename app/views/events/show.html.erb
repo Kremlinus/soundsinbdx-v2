@@ -4,18 +4,18 @@
 
 <div class="wrapper-showEvent">
 
-   <div class="showEvent-container_img">
+   <div class="showEvent-container_img reveal">
       <%= image_tag @event.image %>
    </div>
 
-   <div class="showEvent-container_txt">
+   <div class="showEvent-container_txt reveal">
 
       <h1 class="name"><%= @event.name %></h1>
 
       <div class="mainInfos">
-         <p class="date">le <%= @event.date.strftime "%d.%m.%y."%> <br>à <%= @event.date.strftime "%Hh%M" %></p>
-         <p class="location">@IBOAT</p>
-         <p class="price">à partir de <%= @event.price %> €</p>
+         <p class="date">le <strong><%= @event.date.strftime "%d.%m.%y."%></strong> <br>à <strong><%= @event.date.strftime "%Hh%M" %></strong></p>
+         <p class="location">@<strong>IBOAT</strong></p>
+         <p class="price">à partir de <strong><%= @event.price %> €</strong></p>
       </div>
 
       <!-- Description -->

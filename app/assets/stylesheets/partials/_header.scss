@@ -59,6 +59,7 @@ header {
             }
 
             a {
+               transition: .25s ease-out;
                text-decoration: none;
                color: $black;
                font-weight: 700;
@@ -204,14 +205,14 @@ header {
   width: 30px;
   position: absolute;
   z-index: 3;
-  left: 16px;
+  left: 5vw;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 
    @include breakpoint(laptop) {
       height: 30px;
-      left: 50px;
+      left: 10vw;
    }
 
 	 span {
