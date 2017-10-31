@@ -13,6 +13,6 @@ sr.reveal('.events-cards', {
    duration: 500,
    delay: 2,
    reverse: true,
-   viewFactor: -0.75,
+   viewFactor: -0.5,
    easing: 'ease-out'
 });

@@ -40,6 +40,7 @@
    }
 
    .blueBtn {
+      font-weight: 600;
       margin: 30px auto 15px;
       @include breakpoint(laptop) {
          margin: 30px auto 10px 10vw;

@@ -22,19 +22,23 @@
       margin: auto;
       h1.name {
          color: $black;
+         font-size: 3em;
       }
       .mainInfos {
          padding: 15px 0;
-         //font-weight: 600;
-         color: $blue;
-         //color: $black;
+         font-weight: 600;
+         color: $black;
+         max-width: 450px;
          display: flex;
          justify-content: space-between;
          line-height: 1.2;
+
       }
       .desc {
          margin: 20px 0 40px 0;
          p {
+            max-width: 450px;
+            font-size: .85em;
             line-height: 1.5;
          }
       }
@@ -70,7 +74,6 @@
          padding: 50px 80px 0 0;
          .mainInfos {
             padding: 20px 0;
-            max-width: 450px;
          }
       }
    }
