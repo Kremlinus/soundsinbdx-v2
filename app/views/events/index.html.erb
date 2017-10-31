@@ -7,7 +7,7 @@
    <p class="page-description">Tu cherches où sortir à Bordeaux ? Ne te prends plus la tête ! Chaque semaine, l’équipe te concocte une séléction des meilleures sorties à Bordeaux. Tu trouveras ici tous genres d’événements, clubs, afterworks, festival, open air ou même concert.</p>
 
    <!-- Search filters -->
-   <a href="#" id="btnFilter">Filtrer</a>
+   <p class="blueBtn" id="btnFilter">Filtrer</p>
    <div class="container-filters" id="container-filters">
 
       <%= form_tag event_filter_url, :class => 'selectEvent-container' do %>
@@ -34,11 +34,11 @@
    </div>
 
    <!-- Events -->
-   <div class="container-events">
+   <div class="container-events" id="container-events">
 
       <!-- If there is no results or events -->
       <% if @events.count <= 0 %>
-        <p class="noResults reveal">Aucun résultat 😕</p>
+        <p class="noResults">Aucun résultat 😕</p>
       <% else %>
 
       <!-- Events' mosaic -->

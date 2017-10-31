@@ -13,7 +13,7 @@
       text-align: center;
       @include breakpoint(laptop) {
          padding: 0px 20px 40px;
-         font-size: 3.125em;
+         font-size: 2.25em;
       }
       @include breakpoint(desktop) {
          padding: 0px;
@@ -39,6 +39,19 @@
       }
    }
 
+   .blueBtn {
+      margin: 30px auto 15px;
+      @include breakpoint(laptop) {
+         margin: 30px auto 10px 10vw;
+      }
+      @include breakpoint(desktop) {
+         margin: 30px auto 10px 0;
+      }
+      &:hover {
+         cursor: pointer;
+      }
+   }
+
    p.noResults {
       font-size: 2em;
       font-weight: 700;
@@ -48,20 +61,18 @@
    }
 
    // FILTER STYLES //
-   .is-open {
-      height: 90px;
-      display: block;
+   .container-filters.is-open {
+      opacity: 1;
    }
    .container-filters {
       transition: .25s linear;
-      height: 0px;
-      padding: 40px 0;
+      opacity: 0;
 
       @include breakpoint(laptop) {
-         padding: 40px 20px;
+         padding: 10px 20px;
       }
       @include breakpoint(desktop) {
-         padding: 40px 0px;
+         padding: 10px 0px;
       }
 
       input.filterBtn-search {
@@ -99,18 +110,19 @@
       }
 
       .selectEvent-container {
-         transition: .25s linear;
+         transition: all .25s linear;
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: flex-start;
          @include breakpoint(laptop) {
-            padding: 40px 0 0 0;
+            padding: 20px 0 0 0;
          }
 
          .selectEvent {
             transition: .25s ease-out;
             width: 100%;
+            margin-top: 10px;
             @include breakpoint(phablet) {
                width: 45%;
             }
@@ -153,12 +165,17 @@
 
    // MOSAIC STYLES //
    .container-events {
-      padding-bottom: 200px;
+      transition: transform .5s ease-out;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      transform: translateY(90px);
-
+      transform: translateY(-250px);
+      @include breakpoint(phablet) {
+         transform: translateY(-80px);
+      }
+      @include breakpoint(laptop) {
+         transform: translateY(-80px);
+      }
       a.linkEvent {
          width: 100%;
          @include breakpoint(phablet) {
@@ -297,4 +314,14 @@
 
    }
 
+}
+
+.container-events.down {
+   transform: translateY(20px);
+   @include breakpoint(phablet) {
+      transform: translateY(20px);
+   }
+   @include breakpoint(laptop) {
+      transform: translateY(20px);
+   }
 }

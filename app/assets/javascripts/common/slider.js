@@ -11,9 +11,6 @@ var slider = tns({
   "responsive": {
      "600": {
         "fixedWidth": 350,
-     },
-      "1024": {
-         "fixedWidth": 400,
-      }
+     }
  },
 });

@@ -23,7 +23,7 @@
          }
          @include breakpoint (laptop) {
             padding: 40px 10vw 10px 10vw;
-            transform: translateY(620px);
+            transform: translateY(520px);
          }
          &:active, &:focus {
             outline: none;
@@ -84,11 +84,7 @@
          height: 280px;
          overflow: hidden;
          @include breakpoint (phablet) {
-            height: 350px;
-         }
-         @include breakpoint (laptop) {
-            height: 400px;
-
+            height: 300px;
          }
          img {
             object-fit: contain;

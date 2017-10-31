@@ -16,7 +16,7 @@
       word-wrap: break-word;
       color: $black;
       @include breakpoint(tablet) {
-         font-size: 3.125em;
+         font-size: 2.25em;
       }
       strong {
          color: $blue;

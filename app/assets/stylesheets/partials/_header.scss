@@ -49,7 +49,7 @@ header {
             opacity: 0;
             transition: .3s ease-out;
             @include breakpoint(laptop) {
-               font-size: 3.125em;
+               font-size: 3em;
 	         }
 
             &:hover {
@@ -202,7 +202,7 @@ header {
 // Button styles
 .menu-btn {
   height: 24px;
-  width: 30px;
+  width: 24px;
   position: absolute;
   z-index: 3;
   left: 5vw;
@@ -211,14 +211,14 @@ header {
   cursor: pointer;
 
    @include breakpoint(laptop) {
-      height: 30px;
+      height: 24px;
       left: 10vw;
    }
 
 	 span {
 		 	transition: .20s linear;
 			background: $black;
-			width: 30px;
+			width: 24px;
 			height: 3px;
          position: absolute;
          top: 50%;
@@ -227,18 +227,18 @@ header {
 			&:after, &:before {
 				content: '';
 				background: $black;
-				width: 30px;
+				width: 24px;
 				height: 3px;
 				position: absolute;
             transition: .25s linear;
 			}
 
 			&:after {
-				bottom: 9.5px;
+				bottom: 7.5px;
 			}
 
 			&:before {
-				top: 9.5px;
+				top: 7px;
 			}
 	 }
 }
