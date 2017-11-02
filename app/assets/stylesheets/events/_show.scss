@@ -1,5 +1,4 @@
 .wrapper-showEvent {
-   overflow-y:hidden;
    margin-top: 50px;
    display: flex;
    flex-wrap: wrap;
@@ -8,6 +7,7 @@
    .showEvent-container_img {
       height: 200px;
       width: 100%;
+      border-radius: 2px;
       img {
          width: 100%;
          height: 100%;

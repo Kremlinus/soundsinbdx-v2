@@ -1,4 +1,4 @@
-.wrapper-indexEvents {
+.wrapper-indexArtists {
    padding: 80px 20px;
    @include breakpoint(laptop) {
       width: 1024px;
@@ -7,10 +7,10 @@
    }
 
    // HEADING & DESC STYLES //
-   h1.page-title {
-      text-transform: uppercase;
+   h1.pageTitle {
       padding: 40px 0 20px;
       font-size: 2em;
+      text-transform: uppercase;
       @include breakpoint(laptop) {
          padding: 0px 20px 40px;
          font-size: 3em;
@@ -21,7 +21,7 @@
       }
    }
 
-   p.page-description {
+   p.pageDesc {
       font-size: .85em;
       font-family: 'Helvetica',sans-serif;
       line-height: 1.5;
@@ -159,7 +159,7 @@
    }
 
    // MOSAIC STYLES //
-   .container-events {
+   .container-artists {
       transition: transform .5s ease-out;
       display: flex;
       flex-wrap: wrap;
@@ -181,7 +181,7 @@
          }
       }
 
-      .events-cards {
+      .artists-cards {
          position: relative;
          width: 100%;
          margin-bottom: 30px;
@@ -193,7 +193,7 @@
             margin-bottom: 22px;
             &:hover {
 
-               .events-cards_infos {
+               .artists-cards_infos {
                   opacity: 1;
                   transition: .25s ease-out;
                   transform: translateY(-50%);
@@ -307,14 +307,4 @@
 
    }
 
-}
-
-.container-events.down {
-   transform: translateY(20px);
-   @include breakpoint(phablet) {
-      transform: translateY(20px);
-   }
-   @include breakpoint(laptop) {
-      transform: translateY(20px);
-   }
 }

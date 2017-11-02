@@ -1,0 +1,76 @@
+.sectThisWeek {
+   margin: 0px 5vw 50px;
+
+   .sectThisWeek-container_img {
+      width: 100%;
+      height: 200px;
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         border-radius: 2px;
+      }
+   }
+
+   .sectThisWeek-container_txt {
+      padding: 30px 0 5px;
+      .smallTitle {
+         text-transform: uppercase;
+         color: $blue;
+         font-weight: 700;
+         font-size: .9em;
+         margin-bottom: 5px;
+      }
+      .name {
+         color: $black;
+         font-weight: 700;
+         font-size: 2.5em;
+         margin-bottom: 10px;
+      }
+      .date {
+         color: $black;
+         font-size: 1em;
+         margin-bottom: 20px;
+      }
+      .desc {
+         font-size: .9em;
+         line-height: 1.2;
+         color: $black;
+         margin-bottom: 30px;
+      }
+   }
+
+   @include breakpoint(laptop) {
+      margin: 50px 10vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+
+      .sectThisWeek-container_img, .sectThisWeek-container_txt {
+         height: calc(95vh - 240px);
+      }
+
+      .sectThisWeek-container_img {
+         width: 50%;
+         padding-right: 80px;
+         padding-left: 0;
+      }
+
+      .sectThisWeek-container_txt {
+         width: 50%;
+         padding-right: 40px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+
+         .desc {
+            margin-bottom: 40px;
+         }
+
+
+      }
+
+   }
+}

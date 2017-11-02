@@ -2,6 +2,7 @@
 
    &-container {
       width: 100vw;
+      margin-top: 100px;
 
       .tns-inner {
          height: 500px;
@@ -23,7 +24,7 @@
          }
          @include breakpoint (laptop) {
             padding: 40px 10vw 10px 10vw;
-            transform: translateY(520px);
+            transform: translateY(480px);
          }
          &:active, &:focus {
             outline: none;
@@ -59,7 +60,7 @@
          color: $black;
          font-weight: 600;
          @include breakpoint(laptop){
-            font-size: 3.125em;
+            font-size: 3em;
             padding-top: 80px;
          }
          strong {
@@ -74,7 +75,7 @@
    position: relative;
    margin-bottom: 200px;
    @include breakpoint(laptop) {
-      padding: 40px 0 40px 10vw;
+      padding: 0 0 40px 10vw;
    }
 
 
@@ -87,8 +88,10 @@
             height: 300px;
          }
          img {
-            object-fit: contain;
+            transition: .25s ease-out;
+            object-fit: cover;
             height: 100%;
+            width: 100%;
          }
 
       }
@@ -143,17 +146,26 @@
          }
 
       }
-
-      &:hover {
-         .events-cards_img {
-            box-shadow: 1px 25px 25px rgba($black, .05);
-            transform: translateY(-2%);
-            img {
-               text-align: center;
-            }
+      @include breakpoint(laptop) {
+         .events-cards_infos{
+            opacity: 0;
+            transition: .25s ease-out;
          }
+         &:hover {
+            .events-cards_infos{
+               opacity: 1;
+            }
 
+            .events-cards_img {
+               img {
+                  width: 105%;
+                  height: 105%;
+               }
+            }
+
+         }
       }
+
    }
 
 }

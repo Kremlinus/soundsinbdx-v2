@@ -1,30 +1,36 @@
 <% content_for :meta_title, "Liste des artistes" %>
 <% content_for :meta_description, "Retrouvez la liste des meilleurs artistes sur la scène Bordelaise, sélectionnées par l'équipe de Sounds In Bordeaux !" %>
 
-<p id="notice"><%= notice %></p>
+<div class="wrapper-indexArtists">
 
-<h1>Artists</h1>
+   <div class="container-txt">
+      <h1 class="pageTitle">les<br>artistes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Baseline</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <p class="pageDesc">Découvre ici les artistes et DJs phares de la scène Bordelaise. Principalement orienté electro, cette liste non-exhaustive référence les artistes Bordelais que tu pourrais aimer. Pour chaque artistes, on a mit à ta disposition un de ses sons pour te donner un avant goût.
+      <br>
+      Tu trouveras également les liens de ses pages soundcloud, pour découvrir un peu plus son univers, puis facebook, instagram et twitter pour pouvoir le suivre et ne pas rater son prochain set à Bordeaux! </p>
+   </div>
 
-  <tbody>
-    <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.baseline %></td>
-        <td><%= artist.description %></td>
-        <td><%= link_to 'Show', artist_url(artist.slug) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+   <!-- Artists -->
+   <div class="container-artists" id="container-artists">
+      <!-- Artists' mosaic -->
+      <% @artists.each do |artist| %>
 
-<br>
+         <%= link_to artist_url(artist.slug), :class => 'linkEvent' do %>
+            <div class="artists-cards">
+               <div class="artists-cards_img">
+                  <%= image_tag artist.image %>
+               </div>
+              <div class="artists-cards_infos">
+                 <div class="artists-cards_infos">
+                    <h2 class="name"><%= artist.name %></h2>
+                    <p class="baseline"><%= artist.baseline %></p>
+                </div>
+              </div>
+            </div>
+         <% end %>
+      <% end %>
+
+   </div>
+
+</div>
