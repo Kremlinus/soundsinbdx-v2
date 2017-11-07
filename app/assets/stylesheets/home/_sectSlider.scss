@@ -61,7 +61,7 @@
          font-weight: 600;
          @include breakpoint(laptop){
             font-size: 3em;
-            padding-top: 80px;
+            padding-top: 0px;
          }
          strong {
             color: $blue;

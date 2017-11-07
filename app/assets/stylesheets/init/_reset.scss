@@ -111,3 +111,11 @@ input[type="search"]::-webkit-search-decoration {
 strong {
 	font-weight: 700;
 }
+
+.contentWrapper {
+	background: $white;
+	margin-bottom: 200px;
+	@include breakpoint(tablet) {
+		margin-bottom: 300px;
+	}
+}

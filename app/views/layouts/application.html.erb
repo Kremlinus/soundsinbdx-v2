@@ -45,9 +45,11 @@
   </head>
 
   <body>
-
-    <%= render partial: 'layouts/partials/header' %>
-    <%= yield %>
+     
+   <div class="contentWrapper">
+      <%= render partial: 'layouts/partials/header' %>
+      <%= yield %>
+   </div>
     <%= render partial: 'layouts/partials/footer' %>
 
 
