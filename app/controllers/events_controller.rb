@@ -22,10 +22,6 @@ class EventsController < ApplicationController
   def filters
      @events = Event.all
 
-     puts "==============="
-     puts params
-     puts "==============="
-
      # Location filter
      if params[:location] != 'all'
        @events = @events.joins(:location).where(locations: {
