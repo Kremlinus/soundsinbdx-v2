@@ -1,5 +1,4 @@
 .sectThisWeek {
-   margin: 0px 5vw 50px;
 
    .sectThisWeek-container_img {
       width: 100%;
@@ -13,6 +12,7 @@
    }
 
    .sectThisWeek-container_txt {
+      margin: 0px 5vw 0px;
       padding: 30px 0 5px;
       .smallTitle {
          text-transform: uppercase;
@@ -31,9 +31,11 @@
          color: $black;
          font-size: 1em;
          margin-bottom: 20px;
+         font-weight: 600;
       }
       .desc {
          font-size: .9em;
+         max-width: 450px;
          line-height: 1.2;
          color: $black;
          margin-bottom: 30px;
@@ -41,24 +43,23 @@
    }
 
    @include breakpoint(laptop) {
-      margin: 50px 10vw;
+      margin: 0px 10vw;
       display: flex;
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: space-between;
       align-content: center;
 
       .sectThisWeek-container_img, .sectThisWeek-container_txt {
-         height: calc(95vh - 240px);
+         height: calc(100vh - 140px);
       }
 
       .sectThisWeek-container_img {
-         width: 50%;
-         padding-right: 80px;
+         width: 55%;
          padding-left: 0;
       }
 
       .sectThisWeek-container_txt {
-         width: 50%;
+         width: 45%;
          padding-right: 40px;
          display: flex;
          flex-direction: column;
