@@ -4,7 +4,7 @@ sr.reveal('.reveal', {
    duration: 500,
    delay: 2,
    reverse: true,
-   viewFactor: 0.2,
+   viewFactor: 0.5,
    easing: 'ease-out'
 });
 

@@ -2,11 +2,11 @@
    background: lighten($black, 80%);
    padding: 50px 5vw;
    max-width: 100vw;
-   margin-bottom: 80px;
+   margin-top: 80px;
 
    @include breakpoint(laptop) {
       padding: 100px 10vw;
-      margin-bottom: 200px;
+      margin-top: 200px;
    }
 
    &-txt {
@@ -20,7 +20,7 @@
       @include breakpoint(tablet) {
          font-size: 2.25em;
       }
-      
+
       strong {
          color: $blue;
       }
