@@ -1,35 +1,35 @@
 <% content_for :meta_title, @artist.name %>
 <% content_for :meta_description, @artist.description %>
 
-<p id="notice"><%= notice %></p>
+<div class="wrapper-showArtist">
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+   <div class="showArtist-container_img reveal">
+      <%= image_tag @artist.image %>
+   </div>
 
-<p>
-  <strong>Baseline:</strong>
-  <%= @artist.baseline %>
-</p>
+   <div class="showArtist-container_txt reveal">
 
-<p>
-  <strong>Description:</strong>
-  <%= @artist.description %>
-</p>
+      <h1 class="name"><%= @artist.name %></h1>
 
-<p>
-  <strong>Socials:</strong><br>
-  <% @artist.socials.each do |social| %>
-    <%= link_to social.link do %>
-      <%= social.label %>
-    <% end %><br>
-  <% end %>
-</p>
+      <h2 class="baseline"><%= @artist.baseline %></h2>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @artist.image  %>
-</p>
+      <!-- Description -->
+      <div class="desc">
+         <%= markdown(@artist.description) %>
+      </div>
 
-<%= link_to 'Back', artists_path %>
+      <!-- Social links -->
+      <div class="socialContainer">
+         <% @artist.socials.each do |social| %>
+           <%= link_to social.link do %>
+             <%= social.label %>
+           <% end %>
+         <% end %>
+      </div>
+
+      <%= link_to '← Retour aux artistes',  artists_path, :class => 'blackBtn' %>
+
+
+   </div>
+
+</div>

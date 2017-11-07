@@ -1,10 +1,10 @@
-.wrapper-showEvent {
+.wrapper-showArtist {
    margin-top: 50px;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
 
-   .showEvent-container_img {
+   .showArtist-container_img {
       height: 200px;
       width: 100%;
       border-radius: 2px;
@@ -15,7 +15,7 @@
       }
    }
 
-   .showEvent-container_txt {
+   .showArtist-container_txt {
       padding: 40px 20px;
       overflow-y: scroll;
       max-width: 600px;
@@ -24,15 +24,11 @@
          color: $black;
          font-size: 3em;
       }
-      .mainInfos {
-         padding: 15px 0;
-         font-weight: 600;
-         color: $black;
-         max-width: 450px;
-         display: flex;
-         justify-content: space-between;
+      h2.baseline {
+         color: $blue;
+         font-size: 1.15em;
          line-height: 1.2;
-
+         margin: 10px 0 40px;
       }
       .desc {
          margin: 20px 0 40px 0;
@@ -60,17 +56,18 @@
       flex-direction: row-reverse;
       align-items: center;
 
-      .showEvent-container_img {
+      .showArtist-container_img {
          width: 50%;
          height: calc(100vh - 140px);
          overflow-y: hidden;
          img {
+            position: fixed;
             width: 100%;
             object-fit: cover;
          }
       }
 
-      .showEvent-container_txt {
+      .showArtist-container_txt {
          width: 50%;
          max-width: inherit;
          overflow-y: scroll;
@@ -84,5 +81,7 @@
             }
          }
       }
+
+
    }
 }
