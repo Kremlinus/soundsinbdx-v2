@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # GET /
   def home
      @events = Event.where("DATE(date) >= ?", Date.today)
+     @best = @events.where(best: true).sample
   end
 
   # GET /contact
