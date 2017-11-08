@@ -2,12 +2,12 @@
    background: $blue;
    padding: 50px 5vw;
    max-width: 100vw;
-   margin-top: 80px;
+   margin-bottom: 100px;
 
    &-txt {
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.3;
-      font-size: 2em;
+      font-size: 1.5em;
       max-width: calc(100vw - 50px);
       word-wrap: break-word;
       color: $white;
@@ -15,7 +15,7 @@
 
    @include breakpoint(laptop) {
       padding: 100px 10vw;
-      margin-top: 200px;
+      margin-bottom: 200px;
       &-txt {
          font-size: 2.25em;
       }

@@ -1,0 +1,14 @@
+<div class="sectThisWeek">
+
+   <div class="sectThisWeek-container_img">
+      <%= image_tag @best.image %>
+   </div>
+
+   <div class="sectThisWeek-container_txt">
+      <h3 class="smallTitle">coup de coeur</h3>
+      <h2 class="name"><%= @best.name %></h2>
+      <p class="date">le <%= @best.date.strftime "%d.%m.%y."%> à <%= @best.date.strftime "%Hh%M" %></p>
+      <a href="" class="borderBlack">Voir l'événement</a>
+   </div>
+
+</div>

@@ -6,6 +6,7 @@ var slider = tns({
   "speed": 400,
   "fixedWidth": 250,
   "nav": false,
+  "controls": false,
   "arrowKeys": true,
   "controlsText": ['Précédent', 'Suivant'],
   "responsive": {

@@ -11,7 +11,7 @@
    label {
       color: $white;
       font-size: 1.5em;
-      font-weight: 600;
+      font-weight: 700;
    }
 
    input[type='text'] {
@@ -22,7 +22,7 @@
       border-bottom: 2px solid $white;
       font-size: 1.5em;
       color: $white;
-      font-weight: 600;
+      font-weight: 700;
       margin-top: 10px;
       &::placeholder {
          font-family: Helvetica, sans-serif;
@@ -33,7 +33,7 @@
       background: transparent;
       font-size: 1.5em;
       color: $white;
-      font-weight: 600;
+      font-weight: 700;
       border: none;
       text-transform: uppercase;
       margin-top: 10px;

@@ -39,8 +39,8 @@
       }
    }
 
-   .blueBtn {
-      font-weight: 600;
+   .borderBlue {
+      font-weight: 700;
       margin: 30px auto 15px;
       @include breakpoint(desktop) {
          margin: 30px auto 10px 0;
@@ -112,7 +112,8 @@
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
-         justify-content: flex-start;
+         align-content: flex-start;
+         justify-content: space-around;
          @include breakpoint(laptop) {
             padding: 20px 0 0 0;
          }
@@ -130,7 +131,7 @@
 
             label {
                vertical-align: middle;
-               font-weight: 600;
+               font-weight: 700;
                width: 100%;
             }
 
@@ -267,7 +268,7 @@
                   font-size: 1.5rem;
                   color: $black;
                   width: 70%;
-                  font-weight: 600;
+                  font-weight: 700;
                   line-height: 1.2;
                   @include breakpoint (laptop) {
                      font-size: 2rem;

@@ -64,11 +64,11 @@ html, body {
    margin: 0 auto;
 	background: $white;
 	display: block;
+	font-family: 'Helvetica', sans-serif;
 }
 
 html {
 	background: $white;
-	font-family: 'Helvetica', sans-serif;
 }
 
 .pageWrapper {
@@ -115,7 +115,4 @@ strong {
 .contentWrapper {
 	background: $white;
 	margin-bottom: 200px;
-	@include breakpoint(tablet) {
-		margin-bottom: 300px;
-	}
 }

@@ -16,18 +16,23 @@
    }
 
    .showEvent-container_txt {
-      padding: 40px 20px;
+      padding: 40px 5vw;
       overflow-y: scroll;
+      width: 100%;
+      display: block;
       max-width: 600px;
       margin: auto;
       h1.name {
          color: $black;
-         font-size: 3em;
+         font-size: 2.5em;
       }
       .mainInfos {
          padding: 15px 0;
-         font-weight: 600;
+         font-weight: 700;
+         font-size: .9em;
          color: $black;
+         min-width: 280px;
+         width: 100%;
          max-width: 450px;
          display: flex;
          justify-content: space-between;
