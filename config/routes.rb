@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'application#home'
   get '/contact', to: 'application#contact', as: :contact
+  get '/metions-legales', to: 'application#mentionsLegales', as: :metions_legales
 
   get '/artistes/:slug', to: 'artists#show', as: :artist
   get '/artistes', to: 'artists#index', as: :artists

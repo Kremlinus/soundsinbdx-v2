@@ -1,5 +1,6 @@
 .wrapper-indexArtists {
    padding: 80px 20px;
+   min-height: 100vh;
    @include breakpoint(laptop) {
       width: 1024px;
       margin: auto;
