@@ -3,11 +3,7 @@ class ApplicationController < ActionController::Base
 
   # GET /
   def home
-     @events = Event.all
-  end
-
-  # GET /archive
-  def archives
+     @events = Event.where("DATE(date) >= ?", Date.today)
   end
 
   # GET /contact
