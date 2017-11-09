@@ -11,6 +11,9 @@
       max-width: calc(100vw - 50px);
       word-wrap: break-word;
       color: $white;
+      strong {
+         color: $white;
+      }
    }
 
    @include breakpoint(laptop) {
@@ -20,4 +23,5 @@
          font-size: 2.25em;
       }
    }
+   
 }
