@@ -1,27 +1,23 @@
 <% content_for :meta_title, "L'équipe de Sounds In Bordeaux" %>
 <% content_for :meta_description, "Vous voulez en savoir plus ? Retrouvez les membres de l'équipes de Sounds In Bordeaux !" %>
 
-<p id="notice"><%= notice %></p>
+<section class="pageWrapper-about">
 
-<h1 class="pageTitle">À propos</h1>
+   <h1 class="pageTitle">À propos</h1>
 
-<p>Sounds in Bordeaux c’est un nouveau genre d’agenda. Ici tu trouveras une sélection de soirées, afterworks, concerts et festivals dans Bordeaux et ses alentours. Principalement axé électro (techno et house) on te propose aussi, grâce à la diversité des goûts dans notre team, des concerts rock et indé, des soirées funk et disco, mais aussi les meilleures soirées et festivals trance et hardtek.</p>
-
-<p>En clair, on est là pour te faciliter la vie, fini tes apéros galères. Sur Sounds in Bordeaux, on te donne la listes des sorties, avec la timetable, le lien direct vers la billetterie pour choper ta prévente même au dernier moment. SIB c’est ton agenda des meilleures sorties la nuit à Bordeaux.</p>
-
-<p>“Et sinon facebook events fait la même chose en fait…”</p>
-
-<p>Bien vu. Mais concrètement se taper toutes les pages des clubs bordelais ou des DJ, en milieu d’apéro pour choisir où tu vas finir ta soirée, c’est relou avoues le. Nous, on est la pour te simplifier la vie. Dis adieu aux heures de recherche sur facebook, ici les événements sont déjà triés et sélectionnés.</p>
-
+   <article>
+      <p>Sounds in Bordeaux c’est un nouveau genre d’agenda. Ici tu trouveras une sélection de soirées, afterworks, concerts et festivals dans Bordeaux et ses alentours. Principalement axé électro (techno et house) on te propose aussi, grâce à la diversité des goûts dans notre team, des concerts rock et indé, des soirées funk et disco, mais aussi les meilleures soirées et festivals trance et hardtek.</p>
+      <br>
+      <p>En clair, on est là pour te faciliter la vie, fini tes apéros galères. Sur Sounds in Bordeaux, on te donne la listes des sorties, avec la timetable, le lien direct vers la billetterie pour choper ta prévente même au dernier moment. SIB c’est ton agenda des meilleures sorties la nuit à Bordeaux.</p>
+   </article>
 
 
     <% @about_us.each do |about_u| %>
-      <tr>
-        <td><%= about_u.name %></td>
-        <td><%= about_u.role %></td>
-        <td><%= about_u.description %></td>
-
-
-        <td><%= link_to 'Show', about_u_url(about_u.slug) %></td>
-     </tr>
+       <%= link_to about_u_url(about_u.slug) do %>
+         <%= about_u.name %>
+         <%= about_u.role %>
+         <%= image_tag about_u.image %>
+      <% end %>
     <% end %>
+
+</section>

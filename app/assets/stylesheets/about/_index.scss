@@ -1,0 +1,31 @@
+.pageWrapper-about {
+   margin: 70px 5vw;
+
+   .pageTitle {
+      font-size: 2em;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 40px;
+   }
+
+   article {
+      max-width: 550px;
+      margin-bottom: 20px;
+      p {
+         line-height: 1.5;
+         color: $black;
+      }
+   }
+
+   @include breakpoint(tablet) {
+      margin: 200px 10vw;
+      .pageTitle {
+         font-size: 3em;
+         margin-bottom: 80px;
+      }
+      article {
+         margin-bottom: 40px;
+      }
+   }
+   
+}
