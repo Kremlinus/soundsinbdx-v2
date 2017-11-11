@@ -11,13 +11,19 @@
       <p>En clair, on est là pour te faciliter la vie, fini tes apéros galères. Sur Sounds in Bordeaux, on te donne la listes des sorties, avec la timetable, le lien direct vers la billetterie pour choper ta prévente même au dernier moment. SIB c’est ton agenda des meilleures sorties la nuit à Bordeaux.</p>
    </article>
 
+   <article class="about-containerImg">
 
-    <% @about_us.each do |about_u| %>
-       <%= link_to about_u_url(about_u.slug) do %>
-         <%= about_u.name %>
-         <%= about_u.role %>
-         <%= image_tag about_u.image %>
-      <% end %>
-    <% end %>
+      <div class="about-containerImg_card">
+         <% @about_us.each do |about_u| %>
+           <%= link_to about_u_url(about_u.slug) do %>
+             <%= about_u.name %>
+             <%= about_u.role %>
+             <%= image_tag about_u.image %>
+           <% end %>
+         <% end %>
+      </div>
+
+   </article>
+
 
 </section>

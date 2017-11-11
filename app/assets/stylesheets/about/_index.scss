@@ -1,6 +1,6 @@
 .pageWrapper-about {
    margin: 70px 5vw;
-
+   height: auto;
    .pageTitle {
       font-size: 2em;
       text-transform: uppercase;
@@ -17,6 +17,18 @@
       }
    }
 
+   .about-containerImg {
+      &_card {
+         width: 90vw;
+         height: 90vw;
+         img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+
    @include breakpoint(tablet) {
       margin: 200px 10vw;
       .pageTitle {
@@ -26,6 +38,18 @@
       article {
          margin-bottom: 40px;
       }
+      .about-containerImg {
+         display: flex;
+         flex-wrap: wrap;
+         &_card {
+            width: 40vw;
+            height: 40vw;
+            img {
+
+            }
+         }
+      }
+
    }
-   
+
 }
