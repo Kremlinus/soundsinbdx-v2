@@ -3,25 +3,29 @@
 
 <section class="pageWrapper-about">
 
-   <h1 class="pageTitle">À propos</h1>
+   <div class="about-containerTxt">
+      <h1 class="pageTitle">À propos</h1>
 
-   <article>
-      <p>Sounds in Bordeaux c’est un nouveau genre d’agenda. Ici tu trouveras une sélection de soirées, afterworks, concerts et festivals dans Bordeaux et ses alentours. Principalement axé électro (techno et house) on te propose aussi, grâce à la diversité des goûts dans notre team, des concerts rock et indé, des soirées funk et disco, mais aussi les meilleures soirées et festivals trance et hardtek.</p>
-      <br>
-      <p>En clair, on est là pour te faciliter la vie, fini tes apéros galères. Sur Sounds in Bordeaux, on te donne la listes des sorties, avec la timetable, le lien direct vers la billetterie pour choper ta prévente même au dernier moment. SIB c’est ton agenda des meilleures sorties la nuit à Bordeaux.</p>
-   </article>
+      <article>
+         <p>Sounds in Bordeaux c’est un nouveau genre d’agenda. Ici tu trouveras une sélection de soirées, afterworks, concerts et festivals dans Bordeaux et ses alentours. Principalement axé électro (techno et house) on te propose aussi, grâce à la diversité des goûts dans notre team, des concerts rock et indé, des soirées funk et disco, mais aussi les meilleures soirées et festivals trance et hardtek.</p>
+         <br>
+         <p>En clair, on est là pour te faciliter la vie, fini tes apéros galères. Sur Sounds in Bordeaux, on te donne la listes des sorties, avec la timetable, le lien direct vers la billetterie pour choper ta prévente même au dernier moment. SIB c’est ton agenda des meilleures sorties la nuit à Bordeaux.</p>
+      </article>
+   </div>
 
-   <article class="about-containerImg">
+   <article class="aboutUs-container">
 
-      <div class="about-containerImg_card">
-         <% @about_us.each do |about_u| %>
+      <% @about_us.each do |about_u| %>
+         <div class="aboutUs-container-card">
            <%= link_to about_u_url(about_u.slug) do %>
-             <%= about_u.name %>
-             <%= about_u.role %>
              <%= image_tag about_u.image %>
+             <div class="aboutUs-container-card_infos">
+               <h2 class="name"><%= about_u.name %></h2>
+               <h3 class="role"><%= about_u.role %></h3>
+             </div>
            <% end %>
-         <% end %>
-      </div>
+         </div>
+      <% end %>
 
    </article>
 

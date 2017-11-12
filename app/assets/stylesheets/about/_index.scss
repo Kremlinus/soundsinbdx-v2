@@ -9,7 +9,6 @@
    }
 
    article {
-      max-width: 550px;
       margin-bottom: 20px;
       p {
          line-height: 1.5;
@@ -17,20 +16,38 @@
       }
    }
 
-   .about-containerImg {
-      &_card {
-         width: 90vw;
-         height: 90vw;
+   .aboutUs-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      &-card {
+         width: 45vw;
+         height: 45vw;
          img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+         }
+         &_infos {
+            .name {
+               font-weight: 600;
+               font-size: 1.25em;
+               color: $black;
+               line-height: 1.5;
+            }
+            .role {
+               font-weight: 200;
+               color: $blue;
+               font-size: .95em;
+               line-height: 1.2;
+            }
          }
       }
    }
 
    @include breakpoint(tablet) {
       margin: 200px 10vw;
+
       .pageTitle {
          font-size: 3em;
          margin-bottom: 80px;
@@ -38,14 +55,51 @@
       article {
          margin-bottom: 40px;
       }
-      .about-containerImg {
+      .aboutUs-container {
          display: flex;
          flex-wrap: wrap;
          &_card {
             width: 40vw;
             height: 40vw;
-            img {
+         }
+      }
 
+   }
+
+   @include breakpoint(laptop) {
+
+      .about-containerTxt {
+         display: flex;
+         align-content: stretch;
+         h1 {
+            margin-right: 40px;
+            min-width: 300px;
+         }
+         article {
+            width: auto;
+         }
+
+      }
+
+      .aboutUs-container {
+         padding-top: 40px;
+         &-card {
+            width: 20vw;
+            height: 20vw;
+            &:hover {
+               .aboutUs-container-card_infos {
+                  opacity: 1;
+                  transition: .25s ease-out;
+                  transform: translateY(-50%);
+                  &-top, &-bottom {
+                     .name, .time, .date, .place {
+                        transform: translateY(-30%);
+                        opacity: 1;
+                        transition-delay: 1s;
+                        transition: .55s ease-out;
+                     }
+                  }
+               }
             }
          }
       }

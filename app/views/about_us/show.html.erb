@@ -1,27 +1,33 @@
 <% content_for :meta_title, "#{@about_u.name}, #{@about_u.role} de Sounds In Bordeaux" %>
 <% content_for :meta_description, @about_u.description %>
 
-<p id="notice"><%= notice %></p>
+<section class="pageWrapper-aboutUs">
 
-<p>
-  <strong>Name:</strong>
-  <%= @about_u.name %>
-</p>
+   <article class="aboutUs-container">
 
-<p>
-  <strong>Role:</strong>
-  <%= @about_u.role %>
-</p>
+      <div class="aboutUs-container_infos">
+         <h1 class="name"><%= @about_u.name %></h1>
+         <h2 class="role"><%= @about_u.role %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @about_u.description %>
-</p>
+         <%= markdown(@about_u.description) %>
 
-<% @about_u.socials.each do |social| %>
-  <%= link_to social.link do %>
-    <%= social.label %>
-  <% end %><br>
-<% end %>
 
-<%= link_to 'Back', about_us_path %>
+      </div>
+
+      <div class="aboutUs-container_img">
+         <%= image_tag @about_u.image %>
+      </div>
+
+      <div class="aboutUs-container_social">
+         <% @about_u.socials.each do |social| %>
+           <%= link_to social.link do %>
+             <%= social.label %>
+           <% end %><br>
+         <% end %>
+      </div>
+      
+   </article>
+
+
+   <%= link_to 'Retour', about_us_path, :class => 'borderBlack' %>
+</section>
