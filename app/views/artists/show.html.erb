@@ -22,7 +22,7 @@
       <div class="socialContainer">
          <% @artist.socials.each do |social| %>
            <%= link_to social.link do %>
-             <%= social.label %>
+             <%= socialImageFromLabel(social.label) %>
            <% end %>
          <% end %>
       </div>

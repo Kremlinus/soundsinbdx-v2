@@ -1,4 +1,6 @@
 module ApplicationHelper
+   include SocialHelper
+
    def markdown(text)
       options = {
       filter_html:     true,

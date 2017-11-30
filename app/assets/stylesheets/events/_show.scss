@@ -52,8 +52,23 @@
          max-width: 450px;
          display: flex;
          justify-content: space-around;
+         transition: .25s ease-out;
+         img {
+            height: 17px;
+            transition: .25s ease-out;
+         }
          a {
-            color: $blue;
+            transition: .25s ease-out;
+         }
+         a:hover {
+            img {
+               opacity: 1;
+            }
+         }
+         &:hover {
+            img {
+               opacity: .5;
+            }
          }
       }
    }

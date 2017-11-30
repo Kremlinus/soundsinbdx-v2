@@ -41,17 +41,18 @@
 
       .sectThisWeek-container_img{
          height: calc(100vh - 140px);
-         width: calc(100vw - 140px);
+         width: 80vw;
          margin: auto;
       }
 
       .sectThisWeek-container_txt {
-         padding: 40px 40px 0 40px;
-         width: 500px;
+         padding: 40px 40px 0 0;
+         max-width: 600px;
          position: absolute;
          z-index: 2;
          background: $white;
-         bottom: -100px;
+         bottom: -20px;
+         margin-left: 10vw;
       }
 
    }

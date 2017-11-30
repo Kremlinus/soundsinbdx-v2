@@ -34,12 +34,14 @@
       }
 
       &_social {
-         padding: 20px 0 40px;
+         padding: 40px 80px 40px 0;
          margin: 0px 5vw;
          display: flex;
          justify-content: space-around;
-         a:hover {
-            color: $blue;
+         transition: .25s ease-out;
+         img {
+            width: 17px;
+            transition: .25s ease-out;
          }
       }
 
@@ -78,25 +80,31 @@
                object-fit: cover;
             }
          }
+
          &_social {
-            width: 45vw;
-            padding-right: 80px;
+            width: 40vw;
+            max-width: 650px;
+            padding: 40px 100px 40px 0px;
             order: 3;
             margin: 0;
             display: flex;
             justify-content: space-around;
-            a {
-
+            &:hover {
+               img {
+                  width: 17px;
+                  opacity: 0.7;
+               }
+            }
+            img:hover {
+               width: 17px;
+               opacity: 1;
             }
          }
       }
+
       .borderBlack {
          margin: 20px 0vw;
       }
-
-   }
-
-   @include breakpoint(tablet) {
 
    }
 

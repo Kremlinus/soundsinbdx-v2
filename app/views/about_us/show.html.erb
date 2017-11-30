@@ -11,21 +11,22 @@
 
          <%= markdown(@about_u.description) %>
 
+         <div class="aboutUs-container_social">
 
+            <% @about_u.socials.each do |social| %>
+              <%= link_to social.link do %>
+                <%= socialImageFromLabel(social.label) %>
+              <% end %>
+            <% end %>
+
+         </div>
       </div>
 
       <div class="aboutUs-container_img">
          <%= image_tag @about_u.image %>
       </div>
 
-      <div class="aboutUs-container_social">
 
-         <% @about_u.socials.each do |social| %>
-           <%= link_to social.link do %>
-             <%= social.label %>
-           <% end %><br>
-         <% end %>
-      </div>
 
    </article>
 
