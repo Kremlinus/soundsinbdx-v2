@@ -14,7 +14,7 @@
 
       <div class="mainInfos">
          <p class="date">le <%= @event.date.strftime "%d.%m.%y."%> <br>à <%= @event.date.strftime "%Hh%M" %></p>
-         <p class="location">@IBOAT</p>
+         <p class="location"> <%= @event.location.name %> </p>
          <p class="price">à partir de <%= @event.price %> €</p>
       </div>
 
@@ -30,8 +30,10 @@
 
       <!-- Social links -->
       <div class="socialContainer">
+
          <% @event.socials.each do |social| %>
            <%= link_to social.link do %>
+             <%= social.label %>
              <%= social.label %>
            <% end %>
          <% end %>

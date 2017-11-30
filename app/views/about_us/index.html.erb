@@ -4,7 +4,7 @@
 <section class="pageWrapper-about">
 
    <div class="about-containerTxt">
-      <h1 class="pageTitle">À propos</h1>
+      <h1 class="pageTitle">à propos</h1>
 
       <article>
          <p>Sounds in Bordeaux c’est un nouveau genre d’agenda. Ici tu trouveras une sélection de soirées, afterworks, concerts et festivals dans Bordeaux et ses alentours. Principalement axé électro (techno et house) on te propose aussi, grâce à la diversité des goûts dans notre team, des concerts rock et indé, des soirées funk et disco, mais aussi les meilleures soirées et festivals trance et hardtek.</p>
@@ -18,7 +18,11 @@
       <% @about_us.each do |about_u| %>
          <div class="aboutUs-container-card">
            <%= link_to about_u_url(about_u.slug) do %>
-             <%= image_tag about_u.image %>
+
+           <div class="aboutUs-container-card_img">
+              <%= image_tag about_u.image %>
+           </div>
+
              <div class="aboutUs-container-card_infos">
                <h2 class="name"><%= about_u.name %></h2>
                <h3 class="role"><%= about_u.role %></h3>

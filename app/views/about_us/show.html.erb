@@ -19,13 +19,14 @@
       </div>
 
       <div class="aboutUs-container_social">
+
          <% @about_u.socials.each do |social| %>
            <%= link_to social.link do %>
              <%= social.label %>
            <% end %><br>
          <% end %>
       </div>
-      
+
    </article>
 
 
