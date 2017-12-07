@@ -15,7 +15,11 @@
       <div class="mainInfos">
          <p class="date">le <%= @event.date.strftime "%d.%m.%y."%> <br>à <%= @event.date.strftime "%Hh%M" %></p>
          <p class="location"> <%= @event.location.name %> </p>
-         <p class="price">à partir de <%= @event.price %> €</p>
+         <p class="price">
+            <%= link_to @event.socials.where(label: 'tickets')[0].link do %>
+               à partir de <%= @event.price %> €
+            <% end %>
+         </p>
       </div>
 
       <!-- Description -->
@@ -28,18 +32,27 @@
 
       <% end %>
 
-      <!-- Social links -->
-      <div class="socialContainer">
+      <!-- Social -->
 
+      <div class="socialContainer-iframe">
+         <% if @event.socials.where(:label => 'soundcloud').length > 0 %>
+               <iframe height="125" src="<%= @event.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
+         <% else @event.socials.where(:label => 'youtube').length > 0 %>
+               <iframe height="125" src="<%= @event.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
+         <% end %>
+      </div>
+
+      <div class="socialContainer-links">
          <% @event.socials.each do |social| %>
-           <%= link_to social.link do %>
-             <%= socialImageFromLabel(social.label) %>
-           <% end %>
+            <% if social.label != 'youtube' && social.label != 'soundcloud' && social.label != 'tickets' %>
+               <%= link_to social.link do %>
+                  <%= socialImageFromLabel(social.label) %>
+               <% end %>
+            <% end %>
          <% end %>
       </div>
 
       <%= link_to '← Retour aux événements', events_path, :class => 'borderBlack' %>
-
 
    </div>
 

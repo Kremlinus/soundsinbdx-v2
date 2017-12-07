@@ -22,23 +22,31 @@
       display: block;
       max-width: 600px;
       margin: auto;
+
       h1.name {
          color: $black;
          font-size: 2.5em;
       }
+
       .mainInfos {
          padding: 15px 0;
-         font-weight: 700;
          font-size: .9em;
-         color: $black;
          min-width: 280px;
          width: 100%;
          max-width: 450px;
          display: flex;
          justify-content: space-between;
          line-height: 1.2;
-
+         p, a {
+            color: $blue;
+            font-weight: 500;
+         }
+         .price {
+            text-decoration: underline;
+            color: $blue;
+         }
       }
+
       .desc {
          margin: 20px 0 40px 0;
          p {
@@ -47,30 +55,31 @@
             line-height: 1.5;
          }
       }
+
       .socialContainer {
-         margin-bottom: 40px;
-         max-width: 450px;
-         display: flex;
-         justify-content: space-around;
-         transition: .25s ease-out;
-         img {
-            height: 17px;
-            transition: .25s ease-out;
-         }
-         a {
-            transition: .25s ease-out;
-         }
-         a:hover {
+         &-links {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
             img {
-               opacity: 1;
+               height: 15px;
+               width: auto;
+               margin-bottom: 40px;
             }
          }
-         &:hover {
-            img {
-               opacity: .5;
+
+         &-iframe {
+            width: 100%;
+            margin-bottom: 20px;
+            iframe {
+               width: 100%;
             }
          }
       }
+
    }
 
    // Desktop styles
@@ -78,7 +87,7 @@
       flex-wrap: nowrap;
       margin: 70px 10vw;
       flex-direction: row-reverse;
-      align-items: center;
+      align-items: flex-start;
 
       .showEvent-container_img {
          width: 50%;
@@ -96,13 +105,16 @@
          overflow-y: scroll;
          padding: 50px 80px 0 0;
          .mainInfos {
-            padding: 20px 0;
+            padding: 10px 0 20px;
          }
          .socialContainer {
+            margin-top: 25px;
+            padding-right: 80px;
             a:hover {
                text-decoration: underline;
             }
          }
       }
+
    }
 }

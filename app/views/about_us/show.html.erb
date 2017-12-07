@@ -12,13 +12,13 @@
          <%= markdown(@about_u.description) %>
 
          <div class="aboutUs-container_social">
-
             <% @about_u.socials.each do |social| %>
-              <%= link_to social.link do %>
-                <%= socialImageFromLabel(social.label) %>
-              <% end %>
+               <% if social.label != 'youtube' && social.label != 'soundcloud' && social.label != 'tickets' %>
+                  <%= link_to social.link do %>
+                     <%= socialImageFromLabel(social.label) %>
+                  <% end %>
+               <% end %>
             <% end %>
-
          </div>
       </div>
 

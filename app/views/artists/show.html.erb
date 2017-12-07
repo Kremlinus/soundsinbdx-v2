@@ -19,11 +19,21 @@
       </div>
 
       <!-- Social links -->
-      <div class="socialContainer">
+      <div class="socialContainer-iframe">
+         <% if @artist.socials.where(:label => 'youtube').length > 0 %>
+               <iframe height="125" src="<%= @artist.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
+         <% else @artist.socials.where(:label => 'soundcloud').length > 0 %>
+               <iframe height="125" src="<%= @artist.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
+         <% end %>
+      </div>
+
+      <div class="socialContainer-links">
          <% @artist.socials.each do |social| %>
-           <%= link_to social.link do %>
-             <%= socialImageFromLabel(social.label) %>
-           <% end %>
+            <% if social.label != 'youtube' && social.label != 'soundcloud' && social.label != 'tickets' %>
+               <%= link_to social.link do %>
+                  <%= socialImageFromLabel(social.label) %>
+               <% end %>
+            <% end %>
          <% end %>
       </div>
 

@@ -13,12 +13,13 @@
          .role {
             font-size: 1.5em;
             color: $blue;
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 20px;
          }
          p {
             line-height: 1.5;
             color: $black;
+            font-size: .85em;
          }
       }
 
@@ -52,7 +53,6 @@
 
    @include breakpoint(laptop) {
       margin: 100px 10vw 40px;
-      min-height: 100vh;
 
       .aboutUs-container {
          flex-wrap: wrap;
@@ -89,15 +89,9 @@
             margin: 0;
             display: flex;
             justify-content: space-around;
-            &:hover {
-               img {
-                  width: 17px;
-                  opacity: 0.7;
-               }
-            }
-            img:hover {
-               width: 17px;
-               opacity: 1;
+            img {
+               height: 15px;
+               width: auto;
             }
          }
       }

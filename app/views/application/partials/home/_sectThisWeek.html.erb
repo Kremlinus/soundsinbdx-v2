@@ -1,5 +1,5 @@
 <div class="sectThisWeek">
-
+   <%= link_to ('evenements/' + @best.slug) do %>
    <div class="sectThisWeek-container_img">
       <%= image_tag @best.image %>
    </div>
@@ -10,5 +10,5 @@
       <p class="date">le <%= @best.date.strftime "%d.%m.%y."%> à <%= @best.date.strftime "%Hh%M" %></p>
       <a href="" class="borderBlack">Voir l'événement</a>
    </div>
-
+ <% end %>
 </div>
