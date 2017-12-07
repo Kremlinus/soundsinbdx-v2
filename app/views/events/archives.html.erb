@@ -9,11 +9,6 @@
    <!-- Past events -->
    <div class="container-events">
 
-      <!-- If there is no results or events -->
-      <% if @events.count <= 0 %>
-        <p class="noResults">Aucun résultat 😕</p>
-      <% else %>
-
       <!-- Events' mosaic -->
       <% @events.each do |event| %>
 
