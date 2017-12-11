@@ -35,13 +35,14 @@
       }
 
       &_social {
-         padding: 40px 80px 40px 0;
+         padding: 40px 0px 40px 0;
          margin: 0px 5vw;
          display: flex;
          justify-content: space-around;
          transition: .25s ease-out;
          img {
-            width: 17px;
+            width: auto;
+            height: 20px;
             transition: .25s ease-out;
          }
       }
@@ -63,6 +64,7 @@
             margin: 0;
             padding: 80px 80px 20px 0;
             width: 40vw;
+            max-width: 650px;
             .role {
                margin-bottom: 40px;
             }
@@ -84,7 +86,7 @@
          &_social {
             width: 40vw;
             max-width: 650px;
-            padding: 40px 100px 40px 0px;
+            padding: 40px 80px 40px 0;
             order: 3;
             margin: 0;
             display: flex;

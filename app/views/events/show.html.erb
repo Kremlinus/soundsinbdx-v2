@@ -1,10 +1,9 @@
 <% content_for :meta_title, @event.name %>
 <% content_for :meta_description, strip_tags(markdown(@event.description)).gsub!("\n", ' ') %>
 
-
 <div class="wrapper-showEvent">
 
-   <div class="showEvent-container_img reveal">
+   <div class="showEvent-container_img ">
       <%= image_tag @event.image %>
    </div>
 

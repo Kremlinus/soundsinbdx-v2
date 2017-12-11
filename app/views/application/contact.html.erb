@@ -1,8 +1,25 @@
 <% content_for :meta_title, "Sounds in Bordeaux - Contact" %>
 <% content_for :meta_description, "Retrouvez la liste des meilleurs sorties, événements, soirées, concerts et festival à Bordeaux, sélectionnées par l'équipe de Sounds In Bordeaux !" %>
 
-<div class="pageWrapper-contact">
+<section class="pageWrapper-contact">
    <h1 class="pageTitle">Contact</h1>
 
    <p class="pageDesc">Vous voulez faire parti de notre projet, nous supporter dans notre démarche ou tout simplement poser une question? Vous êtes une organisation, un club, un artiste et vous souhaitez engagez un partenariat avec nous pour référencer vos soirées, concerts? N’hésitez pas à nous contacter !</p>
-</div>
+
+   <article class="container contact">
+     <form action="contact">
+       <input type="text" name="first-name" class="field" placeholder="Ton nom">
+       <input type="text" name="last-name" class="field" placeholder="Ton prénom">
+       <input type="text" name="mail" class="field" placeholder="Ton e-mail">
+       <select name="Status" placeholder="Je suis">
+           <option value="artist">UN ARTISTE</option>
+           <option value="company">UNE ENTREPRISE</option>
+           <option value="asso">UNE ASSOSCIATION</option>
+           <option value="privat">UN PARTICULIER</option>
+       </select>
+       <textarea name="message" placeholder="Dis nous tout..."></textarea>
+       <input class="btn-send-contact" type="submit" name="submit" value="envoyer">
+     </form>
+  </article>
+  
+</section>

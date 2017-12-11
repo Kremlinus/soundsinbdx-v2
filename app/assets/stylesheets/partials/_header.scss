@@ -183,30 +183,29 @@ header {
 
    // Animation steps
 
-   @-webkit-keyframes fadeIn {
-   	0% {
-   		opacity: 0.0;
-   		transform: translatey(-25%);
-   	}
-   	100% {
-   		opacity: 1.0;
-   		transform: translatey(25%);
-   	}
-   }
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0.0;
+		transform: translatey(-25%);
+	}
+	100% {
+		opacity: 1.0;
+		transform: translatey(25%);
+	}
+}
 
-   @keyframes fadeIn {
-   	0% {
-      	opacity: 0.0;
-   		transform: translatey(-25%);
-   	}
-   	100% {
-   		opacity: 1.0;
-   		transform: translatey(25%);
-   		}
-   	}
-   }
+@keyframes fadeIn {
+	0% {
+   	opacity: 0.0;
+		transform: translatey(-25%);
+	}
+	100% {
+		opacity: 1.0;
+		transform: translatey(25%);
+		}
+	}
 
-
+}
 // Button styles
 .menu-btn {
   height: 24px;

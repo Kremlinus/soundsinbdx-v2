@@ -40,13 +40,29 @@
          }
       }
       .socialContainer {
-         margin-bottom: 40px;
-         max-width: 450px;
-         display: flex;
-         justify-content: space-around;
-         img {
-            height: 15px;
-            width: auto;
+         &-links {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 650px;
+
+            img {
+               height: 15px;
+               width: auto;
+               margin-bottom: 40px;
+            }
+         }
+
+         &-iframe {
+            width: 100%;
+            max-width: 650px;
+            margin-bottom: 20px;
+            iframe {
+               width: 100%;
+            }
          }
       }
    }
@@ -63,7 +79,6 @@
          height: calc(100vh - 140px);
          overflow-y: hidden;
          img {
-            position: fixed;
             width: 100%;
             object-fit: cover;
          }
@@ -71,7 +86,6 @@
 
       .showArtist-container_txt {
          width: 50%;
-         max-width: inherit;
          overflow-y: scroll;
          padding: 50px 80px 0 0;
          .mainInfos {
@@ -102,5 +116,12 @@
       }
 
 
+   }
+   @include breakpoint(desktop) {
+      justify-content: center;
+      .showArtist-container_txt, .showArtist-container_img {
+         max-width: 650px;
+         margin: 0;
+      }
    }
 }

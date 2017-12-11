@@ -1,5 +1,5 @@
-window.sr = ScrollReveal();
-sr.reveal('.reveal', {
+window.sr = Scroll();
+sr.('.', {
    origin: 'top',
    duration: 500,
    delay: 2,
@@ -8,7 +8,7 @@ sr.reveal('.reveal', {
    easing: 'ease-out'
 });
 
-sr.reveal('.events-cards', {
+sr.('.events-cards', {
    origin: 'top',
    duration: 500,
    delay: 2,
