@@ -53,10 +53,19 @@
    position: relative;
    @include breakpoint(laptop) {
       padding: 0 0 40px 10vw;
+      &:hover {
+         .landingSect-slider_item {
+            opacity: .3;
+         }
+      }
+      .landingSect-slider_item:hover {
+         opacity: 1;
+      }
    }
 
 
    &_item {
+      transition: .25s ease-out;
       width: 280px;
 
       .cards_img {
@@ -168,16 +177,7 @@
          }
 
          &:hover {
-            // .cards_infos{
-            //    opacity: 1;
-            // }
-
-            .cards_img {
-               img {
-                  width: 105%;
-                  height: 105%;
-               }
-            }
+            opacity: 1;
          }
       }
 
