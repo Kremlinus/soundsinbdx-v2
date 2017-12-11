@@ -1,5 +1,5 @@
-var slider = tns({
-  "container": "[data-slider-home]",
+var sliderEvents = tns({
+  "container": "[data-slider-events]",
   "mouseDrag": true,
   "lazyload": true,
   "gutter": 40,
@@ -8,15 +8,14 @@ var slider = tns({
   "nav": false,
   "controls": false,
   "arrowKeys": true,
-  "controlsText": ['Précédent', 'Suivant'],
   "responsive": {
      "600": {
         "fixedWidth": 350,
      }
- },
+ }
 });
 
-var slider = tns({
+var sliderArtists = tns({
   "container": "[data-slider-artists]",
   "mouseDrag": true,
   "lazyload": true,
@@ -26,10 +25,9 @@ var slider = tns({
   "nav": false,
   "controls": false,
   "arrowKeys": true,
-  "controlsText": ['Précédent', 'Suivant'],
   "responsive": {
      "600": {
         "fixedWidth": 350,
      }
- },
+ }
 });

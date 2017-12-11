@@ -21,9 +21,9 @@
       <!-- Social links -->
       <div class="socialContainer-iframe">
          <% if @artist.socials.where(:label => 'youtube').length > 0 %>
-               <iframe height="100" src="<%= @artist.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
+               <iframe height="150" src="<%= @artist.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
          <% else @artist.socials.where(:label => 'soundcloud').length > 0 %>
-               <iframe height="100" src="<%= @artist.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
+               <iframe height="150" src="<%= @artist.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
          <% end %>
       </div>
 

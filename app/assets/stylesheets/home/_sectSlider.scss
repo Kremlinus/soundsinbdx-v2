@@ -116,6 +116,7 @@
                width: calc(30% - 5px);
                line-height: 1.2;
                text-align: right;
+               font-weight: 500;
             }
 
          }
@@ -176,11 +177,8 @@
                   width: 105%;
                   height: 105%;
                }
-
             }
-
          }
-
       }
 
       @include breakpoint (phablet) {

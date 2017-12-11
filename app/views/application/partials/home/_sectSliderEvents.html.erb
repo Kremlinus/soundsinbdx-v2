@@ -6,7 +6,7 @@
    </div>
 
    <!-- Slider -->
-   <div class="landingSect-slider" data-slider-home>
+   <div class="landingSect-slider" data-slider-events>
 
       <% @events.first(5).each do |event| %>
 
@@ -23,7 +23,7 @@
                   <p class="date">le <%= event.date.strftime "%d %b" %></p>
                </span>
                <span class="cards_infos-bottom">
-                  <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
+                  <p class="time"> à partir de <%= number_to_currency(event.price, unit: "") %>€</p>
                   <p class="place">
                      <% begin %>
                         @<%= event.socials.where(label: "map")[0].link %>

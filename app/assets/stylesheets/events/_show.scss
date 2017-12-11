@@ -30,7 +30,7 @@
 
       .mainInfos {
          padding: 15px 0;
-         font-size: .9em;
+         font-size: 1em;
          min-width: 280px;
          width: 100%;
          max-width: 450px;
@@ -39,7 +39,7 @@
          line-height: 1.2;
          p, a {
             color: $blue;
-            font-weight: 500;
+            font-weight: 600;
          }
          .price {
             text-decoration: underline;
