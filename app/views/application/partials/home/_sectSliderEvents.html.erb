@@ -1,4 +1,4 @@
-<section class="landingSect-container">
+<section class="landingSect-container events">
 
    <!-- Title -->
    <div class="landingSect-txt">
@@ -12,17 +12,17 @@
 
          <div class="landingSect-slider_item">
             <%= link_to event_url(event.slug) do %>
-            <div class="events-cards_img">
+            <div class="cards_img">
                <%= image_tag event.image %>
             </div>
 
-            <div class="events-cards_infos">
+            <div class="cards_infos">
 
-               <span class="events-cards_infos-top">
+               <span class="cards_infos-top">
                   <h2 class="name"><%= event.name %></h2>
                   <p class="date">le <%= event.date.strftime "%d %b" %></p>
                </span>
-               <span class="events-cards_infos-bottom">
+               <span class="cards_infos-bottom">
                   <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
                   <p class="place">
                      <% begin %>

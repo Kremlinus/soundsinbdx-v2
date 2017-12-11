@@ -2,10 +2,6 @@
 
    &-container {
       width: 100vw;
-      padding-bottom: 100px;
-      @include breakpoint (laptop) {
-         padding-bottom: 140px;
-      }
       .tns-inner {
          height: 450px;
       }
@@ -39,12 +35,12 @@
    }
 
    &-txt {
-      padding: 0 25px 0 5vw;
+      padding: 0 5vw 0 5vw;
       width: 100vw;
       background: $white;
       position: relative;
       @include breakpoint(laptop) {
-         padding: 0 25px 0 10vw;
+         padding: 0 10vw 0 10vw;
       }
 
       .title {
@@ -67,7 +63,6 @@
 .landingSect-slider {
    padding: 0 0 40px 5vw;
    position: relative;
-   margin-bottom: 200px;
    @include breakpoint(laptop) {
       padding: 0 0 40px 10vw;
    }
@@ -76,7 +71,7 @@
    &_item {
       width: 280px;
 
-      .events-cards_img {
+      .cards_img {
          transition: .25s ease-out;
          height: 280px;
          overflow: hidden;
@@ -88,10 +83,26 @@
          }
 
       }
-      .events-cards_infos {
+      .cards_infos {
          padding: 20px 5px;
          background: transparent;
 
+         &-small {
+            padding: 20px 5px;
+            .name {
+               color: $black;
+               margin-bottom: 10px;
+               font-weight: 700;
+               width: calc(70% - 5px);
+               line-height: 20px;
+            }
+
+            .baseline {
+               font-weight: 300;
+               color: $blue;
+               font-size: 1rem;
+            }
+         }
          &-top {
             display: -webkit-flex;
             display: -ms-flex;
@@ -99,14 +110,11 @@
             justify-content: space-between;
             align-content: center;
 
-            .name {
-               font-size: 1.3rem;
-               color: $black;
-               font-weight: 700;
-               width: calc(70% - 5px);
-               line-height: 20px;
+            .baseline {
+               font-weight: 400;
+               color: $blue;
+               font-size: 1rem;
             }
-
             .date {
                font-size: .9rem;
                color: $blue;
@@ -136,12 +144,11 @@
 
       @include breakpoint(laptop) {
 
-         .events-cards_infos{
-            opacity: 0;
+         .cards_infos{
+            //opacity: 0;
             transition: .25s ease-out;
 
             &-top {
-
                .name {
                   font-size: 1.875rem;
                   line-height: 30px;
@@ -151,7 +158,6 @@
                   font-size: 1rem;
                   line-height: 30px;
                }
-
             }
 
             &-bottom {
@@ -159,19 +165,15 @@
                .time, .place {
                   font-size: .9rem;
                }
-
             }
-
          }
 
          &:hover {
+            // .cards_infos{
+            //    opacity: 1;
+            // }
 
-            .events-cards_infos{
-               opacity: 1;
-            }
-
-            .events-cards_img {
-
+            .cards_img {
                img {
                   width: 105%;
                   height: 105%;
@@ -186,7 +188,7 @@
       @include breakpoint (phablet) {
          width: 300px;
 
-         .events-cards_img {
+         .cards_img {
             height: 300px;
          }
 
@@ -194,4 +196,17 @@
 
    }
 
+}
+
+.landingSect-container.events {
+   padding-bottom: 40px;
+   @include breakpoint(laptop) {
+      padding-bottom: 80px;
+   }
+}
+.landingSect-container.artists {
+   padding-bottom: 100px;
+   @include breakpoint(laptop) {
+      padding-bottom: 200px;
+   }
 }

@@ -1,4 +1,4 @@
-<section class="landingSect-container">
+<section class="landingSect-container artists">
 
    <!-- Title -->
    <div class="landingSect-txt">
@@ -8,7 +8,22 @@
    <!-- Slider -->
    <div class="landingSect-slider" data-slider-home>
 
+      <% Artist.first(5).each do |artist| %>
 
+         <div class="landingSect-slider_item">
+            <%= link_to artist_url(artist.slug) do %>
+            <div class="cards_img">
+               <%= image_tag artist.image %>
+            </div>
+
+            <div class="cards_infos-small">
+               <h2 class="name"><%= artist.name %></h2>
+               <h3 class="baseline"><%= artist.baseline %></h3>
+            </div>
+            <% end %>
+         </div>
+
+      <% end %>
 
    </div>
 
