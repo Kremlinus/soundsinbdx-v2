@@ -19,19 +19,6 @@
          }
       }
 
-      button {
-         background: transparent;
-         border: none;
-         font-size: 1em;
-         padding: 0 0 5px 0;
-         color: $blue;
-         border-bottom: 2px solid $blue;
-         margin-right: 20px;
-         &:active, &:focus {
-            outline: none;
-         }
-      }
-
    }
 
    &-txt {
@@ -49,7 +36,8 @@
          font-weight: 700;
          margin-bottom: 40px;
          @include breakpoint(laptop){
-            font-size: 3em;
+            font-size: 2.25em;
+            line-height: 1.2;
             padding-top: 0px;
             margin-bottom: 80px;
          }
@@ -81,8 +69,8 @@
             height: 100%;
             width: 100%;
          }
-
       }
+
       .cards_infos {
          padding: 20px 5px;
          background: transparent;
@@ -109,7 +97,14 @@
             display: flex;
             justify-content: space-between;
             align-content: center;
-
+            .name {
+               color: $black;
+               margin-bottom: 10px;
+               font-weight: 700;
+               width: calc(70% - 5px);
+               line-height: 1.2;
+               font-size: 1em;
+            }
             .baseline {
                font-weight: 400;
                color: $blue;
@@ -148,20 +143,23 @@
             //opacity: 0;
             transition: .25s ease-out;
 
+            &-small {
+               .name {
+                  font-size: 1.5rem;
+               }
+            }
+
             &-top {
                .name {
-                  font-size: 1.875rem;
-                  line-height: 30px;
+                  font-size: 1.5rem;
+                  line-height: 1.2;
                }
-
                .date {
                   font-size: 1rem;
                   line-height: 30px;
                }
             }
-
             &-bottom {
-
                .time, .place {
                   font-size: .9rem;
                }

@@ -35,9 +35,9 @@
 
       <div class="socialContainer-iframe">
          <% if @event.socials.where(:label => 'soundcloud').length > 0 %>
-               <iframe height="125" src="<%= @event.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
+               <iframe height="100" src="<%= @event.socials.where(:label => 'soundcloud')[0].link %>" frameborder="0" allowfullscreen></iframe>
          <% else @event.socials.where(:label => 'youtube').length > 0 %>
-               <iframe height="125" src="<%= @event.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
+               <iframe height="100" src="<%= @event.socials.where(:label => 'youtube')[0].link %>" frameborder="0" allowfullscreen></iframe>
          <% end %>
       </div>
 

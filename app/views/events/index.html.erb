@@ -62,9 +62,9 @@
                     <p class="time"> à <%= event.date.strftime "%Hh%M" %></p>
                     <p class="place">
                        <% begin %>
-                          @<%= event.socials.where(label: "map")[0].link %>
+                        @<%= event.location.name %>
                        <% rescue %>
-                       Lieu secret
+                          Lieu secret
                        <% end %>
                     </p>
                  </div>
