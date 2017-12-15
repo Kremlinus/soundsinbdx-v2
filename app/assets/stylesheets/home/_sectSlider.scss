@@ -31,10 +31,11 @@
       }
 
       .title {
-         font-size: 2em;
+         font-size: 1.85em;
          color: $black;
          font-weight: 700;
          margin-bottom: 40px;
+         line-height: 1.2;
          @include breakpoint(laptop){
             font-size: 2.25em;
             line-height: 1.2;
@@ -92,12 +93,13 @@
                font-weight: 700;
                width: calc(70% - 5px);
                line-height: 1.2;
+               font-size: 1.35em;
             }
 
             .baseline {
-               font-weight: 300;
+               font-weight: 400;
                color: $blue;
-               font-size: 1rem;
+               font-size: .9rem;
             }
          }
          &-top {
@@ -112,15 +114,10 @@
                font-weight: 700;
                width: calc(70% - 5px);
                line-height: 1.2;
-               font-size: 1em;
-            }
-            .baseline {
-               font-weight: 400;
-               color: $blue;
-               font-size: 1rem;
+               font-size: 1.35em;
             }
             .date {
-               font-size: .9rem;
+               font-size: .9em;
                color: $blue;
                width: calc(30% - 5px);
                line-height: 1.2;
@@ -140,7 +137,7 @@
 
             .time, .place {
                color: lighten($black, 50%);
-               font-size: .75rem;
+               font-size: .9em;
             }
 
          }
@@ -156,6 +153,9 @@
             &-small {
                .name {
                   font-size: 1.5rem;
+               }
+               .baseline {
+                  font-size: 1em;
                }
             }
 

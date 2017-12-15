@@ -45,11 +45,9 @@
 
   <body>
 
-   <%= render partial: 'layouts/partials/header' %>
-
-   <%= yield %>
-
-   <%= render partial: 'layouts/partials/footer' %>
+      <%= render partial: 'layouts/partials/header' %>
+         <%= yield %>
+      <%= render partial: 'layouts/partials/footer' %>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/min/tiny-slider.js"></script>
    <%= javascript_include_tag 'application' %>
@@ -58,6 +56,9 @@
    <% elsif current_page?(root_path) %>
       <%= javascript_include_tag 'home' %>
    <% end %>
-
+   <script id="__bs_script__">//<![CDATA[
+       document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+   //]]></script>
   </body>
+
 </html>

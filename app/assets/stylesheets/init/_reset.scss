@@ -27,6 +27,12 @@ time, mark, audio, video, *::placeholder {
 	text-decoration: none;
 	color: $black;
 }
+
+*::selection {
+	background: $blue;
+	color: $white;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {

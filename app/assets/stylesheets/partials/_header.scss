@@ -1,6 +1,6 @@
 header {
    position: fixed;
-   z-index: 99;
+   z-index: 3;
    top: 0;
    width: 100vw;
    padding: 10px 15px;
@@ -32,6 +32,10 @@ header {
       flex-direction: column;
 
       &-main {
+         height: 47vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
 
          &_item {
             list-style: none;
@@ -39,7 +43,7 @@ header {
             text-decoration: none;
             text-align: center;
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: .5em;
             opacity: 0;
             transition: .3s ease-out;
 
@@ -69,7 +73,7 @@ header {
       &-sublinks {
          font-family: Helvetica, Arial, sans-serif;
          text-align: center;
-         padding-top: 2em;
+         padding-top: 40px;
          transition: .3s ease-out;
          animation-delay: 5s;
 
@@ -94,7 +98,7 @@ header {
 
       &-social {
          text-align: center;
-         margin: 20px auto;
+         margin: 40px auto 20px;
          justify-content: space-between;
          transition: 1s ease-out;
          display: flex;

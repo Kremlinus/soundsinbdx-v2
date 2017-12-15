@@ -24,7 +24,7 @@
    }
 
    p.pageDesc {
-      font-size: .85em;
+      font-size: .9em;
       line-height: 1.5;
       padding: 20px 0;
       max-width: 500px;
@@ -272,7 +272,7 @@
                flex-wrap: wrap;
 
                .name {
-                  font-size: 1.5rem;
+                  font-size: 1.25rem;
                   color: $black;
                   width: 70%;
                   font-weight: 700;
@@ -290,6 +290,7 @@
                   line-height: 2em;
                   vertical-align: bottom;
                   text-align: right;
+                  font-weight: 600;
                   @include breakpoint (laptop) {
                      text-align: left;
                      font-size: 1rem;
@@ -307,7 +308,8 @@
                padding-top: 5px;
                .time, .place {
                   color: lighten($black, 50%);
-                  font-size: .75rem;
+                  font-size: .9rem;
+                  font-weight: 400;
                   @include breakpoint (laptop) {
                      font-size: .9rem;
                   }

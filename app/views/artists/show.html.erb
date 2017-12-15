@@ -1,5 +1,5 @@
 <% content_for :meta_title, @artist.name %>
-<% content_for :meta_description, @artist.description %>
+<% content_for :meta_description, strip_tags(markdown(@artist.description)).gsub!("\n", ' ') %>
 
 <div class="wrapper-showArtist">
 
