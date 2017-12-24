@@ -56,9 +56,11 @@
    <% elsif current_page?(root_path) %>
       <%= javascript_include_tag 'home' %>
    <% end %>
-   <script id="__bs_script__">//<![CDATA[
-       document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
-   //]]></script>
+   <% if Rails.env.development? %>
+     <script id="__bs_script__">//<![CDATA[
+         document.write("<script async src='http://HOST:3001/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+     //]]></script>
+   <% end %>
   </body>
 
 </html>
