@@ -46,7 +46,7 @@ GEM
       rails
     builder (3.2.3)
     byebug (9.1.0)
-    carrierwave (1.2.1)
+    carrierwave (1.2.2)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
@@ -250,7 +250,7 @@ DEPENDENCIES
   autoprefixer-rails
   browser_sync_rails
   byebug
-  carrierwave (~> 1.0)
+  carrierwave (~> 1.2.2)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg
