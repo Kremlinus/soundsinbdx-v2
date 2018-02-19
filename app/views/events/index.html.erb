@@ -42,7 +42,7 @@
       <% else %>
 
       <!-- Events' mosaic -->
-      <% @events.each do |event| %>
+      <% @events.sort_by do |event| %>
 
        <% event.best %>
        <%= link_to event_url(event.slug), :class => 'linkEvent' do %>

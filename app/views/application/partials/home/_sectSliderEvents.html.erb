@@ -26,9 +26,9 @@
                   <p class="time"> à partir de <%= number_to_currency(event.price, unit: "") %>€</p>
                   <p class="place">
                      <% begin %>
-                        @<%= event.socials.where(label: "map")[0].link %>
+                      @<%= event.location.name %>
                      <% rescue %>
-                      Lieu secret
+                       Lieu secret
                      <% end %>
                   </p>
                </span>
